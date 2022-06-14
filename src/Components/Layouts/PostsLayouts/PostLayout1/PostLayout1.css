@@ -1,0 +1,31 @@
+.pagelayout1>.row{
+    margin: -11px;
+}
+.pagelayout1>.row>.col{
+    padding: 11px;
+}
+.pagelayout1>.row>.col>.row{
+    margin: 0 -9px
+}
+.pagelayout1>.row>.col>.row>.col{
+    padding: 0 9px;
+}
+.pagelayout1>.row>.col>.row>.col:nth-child(1){
+    flex: 0 0 auto;
+    width: 45%;
+}
+.pagelayout1>.row>.col>.row>.col:nth-child(2){
+    flex: 0 0 auto;
+    width: 55%;
+}
+.pagelayout1>.row>.col>.row>.col img{
+    width: 100%;
+}
+.pagelayout1>.row>.col>.row>.col h3{
+    font-size: 14.7px;
+    line-height: 20px;
+    margin-bottom: 4px;
+}
+.pagelayout1>.row>.col>.row>.col span{
+    font-size: 13px;
+}

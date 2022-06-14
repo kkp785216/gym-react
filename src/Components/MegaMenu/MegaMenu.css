@@ -1,0 +1,98 @@
+.mega-wrapper {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 60px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+}
+
+.mega-progress {
+    width: 0%;
+    height: 4px;
+    background-color: var(--primary-color);
+}
+
+.mega-row {
+    text-align: center;
+    transform-origin: 0 0;
+    transition: all 0.27s ease-in-out;
+    transform: scaleY(0);
+    opacity: 0;
+    box-shadow: 3px 13px 13px -12px #00000038;
+    background: white;
+}
+
+.mega-row>.col>.mega-img-box>a:last-child {
+    line-height: normal;
+    padding: 3px 6px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: .6rem;
+}
+
+.mega-row>.col>.mega-text-content {
+    border-right: 1px solid #ededed;
+    line-height: 17px;
+}
+
+.mega-row>.col:last-child .mega-text-content {
+    border-right: none;
+}
+
+.mega-row>.col>.mega-text-content>h3 {
+    font-size: 14px;
+    padding-top: 16px;
+}
+
+.mega-row>.col>.mega-text-content>span {
+    font-size: .75rem;
+    padding-bottom: 13px;
+    display: block;
+}
+
+/* Fitness Row */
+.fitness-row> :first-child{
+    flex-grow: 1;
+}
+.fitness-row> :last-child{
+    flex-grow: 4;
+}
+.fitness-row ul{
+    
+}
+.fitness-row ul li{
+    line-height: normal;
+}
+
+.fitness-row .moreList{
+    
+}
+.fitness-row .moreList.on{
+    color: var(--primary-color);
+}
+
+.fitness-row .moreContent:first-child{
+    position: static !important;
+}
+.fitness-row .moreContent{
+    opacity: 0 !important;
+    visibility: hidden;
+    transition: all .3s ease-in-out;
+}
+.fitness-row .moreContent.on{
+    opacity: 1 !important;
+    visibility: visible;
+}
+
+@media (max-width:1170px) {
+    .fitness-row>.col:last-child {
+        flex-grow: 3;
+    }
+
+    .mega-row>.col:last-child {
+        display: none;
+    }
+}

@@ -1,0 +1,31 @@
+/* Utility CSS */
+
+:root{
+    --primary-color: #26c6da;
+    --secondary-color: #444444;
+    --primary-font-color: #313131;
+}
+
+/* Grid Gap */
+.pgap-2>*{
+    padding-left: 0;
+    padding-right: 0.25rem;
+}
+.pgap-2>:last-child{
+    padding-right: 0 !important;
+}
+
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: var(--primary-font-color);
+}
+.default-hover{
+    cursor: pointer;
+    transition: .3s ease;
+}
+.default-hover:hover{
+    color: var(--primary-color);
+}

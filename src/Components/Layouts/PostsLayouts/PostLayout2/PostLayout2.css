@@ -1,0 +1,35 @@
+.pagelayout2>.row{
+    margin: -11px;
+}
+.pagelayout2>.row>.col{
+    padding: 11px;
+}
+.pagelayout2>.row>.col:last-child>hr{
+    display: none;
+}
+.pagelayout2>.row>.col>.row{
+    margin: -9px;
+    padding: 9px 0;
+}
+.pagelayout2>.row>.col>.row>.col{
+    padding: 0 9px;
+}
+.pagelayout2>.row>.col>.row>.col:first-child{
+    flex: 0 0 auto;
+    width: 45%;
+}
+.pagelayout2>.row>.col>.row>.col:last-child{
+    flex: 0 0 auto;
+    width: 55%;
+}
+.pagelayout2>.row>.col>.row>.col img{
+    width: 100%;
+}
+.pagelayout2>.row>.col>.row>.col h3{
+    font-size: 14.7px;
+    line-height: 20px;
+    margin-bottom: 4px;
+}
+.pagelayout2>.row>.col>.row>.col span{
+    font-size: 13px;
+}

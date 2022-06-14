@@ -1,0 +1,53 @@
+nav {
+    height: 60px;
+    line-height: 60px;
+    transition: .27s ease;
+}
+
+nav.on {
+    height: 80px;
+    line-height: 80px;
+}
+nav.on .mega-wrapper{
+    top: 80px;
+}
+
+nav>ul {
+    display: flex;
+}
+
+nav>ul>li {
+    padding-left: 0;
+    padding-right: 33px;
+}
+
+nav>ul>li:hover .mega-progress {
+    width: 100%;
+    transition: all .4s ease-in-out;
+    transition-delay: .3s;
+}
+nav>ul>li:hover .mega-wrapper {
+    opacity: 1;
+    visibility: visible;
+}
+nav>ul>li:hover .mega-wrapper .mega-row {
+    transform: scaleY(1);
+    opacity: 1;
+}
+
+
+nav>ul li>a {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: var(--primary-font-color);
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+nav>ul li a>svg::after {
+    font-family: FontAwesome;
+    content: "\f107";
+    margin-left: 5px;
+    color: inherit;
+    font-size: 13px;
+    font-weight: normal;
+}

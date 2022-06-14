@@ -1,0 +1,102 @@
+.slider-wrapper {}
+
+.slider-wrapper>.row {
+    margin: -2px;
+}
+
+.slider-wrapper>.row>.col {
+    flex: 0 0 auto;
+    width: 25%;
+    padding: 2px;
+}
+
+.slider-wrapper>.row>.col a,
+.slider-wrapper>.row>.col span,
+.slider-wrapper>.row>.col h3 {
+    color: white;
+    text-align: center;
+}
+
+.slider-wrapper>.row>.col:nth-child(1) .slider_img_box,
+.slider-wrapper>.row>.col:nth-child(2) .slider_img_box {
+    height: 400px;
+    overflow: hidden;
+}
+.slider-wrapper>.row>.col:nth-child(1) .slider_img_box img,
+.slider-wrapper>.row>.col:nth-child(2) .slider_img_box img{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.slider-wrapper>.row>.col:nth-child(1) .slider_img_box .slider-content .slider-date,
+.slider-wrapper>.row>.col:nth-child(2) .slider_img_box .slider-content .slider-date{
+ display: block;
+}
+.slider-wrapper>.row>.col:nth-child(1) .slider_img_box .slider-content h3,
+.slider-wrapper>.row>.col:nth-child(2) .slider_img_box .slider-content h3{
+ font-size: 30px;
+}
+
+.slider-wrapper>.row>.col:nth-child(1) {
+    width: 50%;
+}
+
+.slider-wrapper>.row>.col:nth-child(2) {
+    width: 50%;
+}
+
+.slider-wrapper>.row>.col .slider_img_box {
+    width: 100%;
+    position: relative;
+}
+.slider-wrapper>.row>.col .slider_img_box::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: linear-gradient(transparent, transparent, #000000cb);
+}
+
+.slider-wrapper>.row>.col .slider_img_box img {
+    width: 100%;
+}
+
+.slider-wrapper>.row>.col .slider-content{
+    padding: 14px;
+    padding-top: 0;
+}
+.slider-wrapper>.row>.col .slider-content> h3{
+    font-size: 17px;
+}
+.slider-wrapper>.row>.col .slider-content .slider-date {
+    display: none;
+    font-size: 14px;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after{
+    content: 'prev';
+    font-size: 11px !important;
+    font-weight: 600;
+    background: #ffffffbd;
+    padding: 11px 14px;
+    border-radius: 100%;
+}
+
+.swiper-button-prev,
+.swiper-button-next{
+    opacity: 0;
+    visibility: 0;
+    transition: .27s ease;
+}
+.swiper:hover  .swiper-button-prev,
+.swiper:hover .swiper-button-next{
+    opacity: 1;
+    visibility: visible;
+}

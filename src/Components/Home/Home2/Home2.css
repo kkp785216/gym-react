@@ -1,0 +1,15 @@
+.home2{
+    
+}
+.home2 .swiper-wrapper a img{
+    width: 100%;
+}
+
+.home2 .swiper-wrapper h3{
+    font-size: 18px;
+    margin-top: 17px;
+    margin-bottom: 5px;
+}
+.home2 .swiper-wrapper span{
+    font-size: 14px;
+}
