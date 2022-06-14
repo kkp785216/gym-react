@@ -5,7 +5,7 @@ import Home from './Components/Home/Home';
 
 function App() {
   return (
-    <Router  basename="/repo-name">
+    <Router>
       <Routes>
         <Route exact path="/" element={<Home />} />
       </Routes>
