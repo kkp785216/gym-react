@@ -2,7 +2,7 @@ import React from 'react'
 
 const BlogPostColumn = (props) => {
   return (
-    <div className='col col-4 p-0'>
+    <div className='col col-4'>
         {props.children}
     </div>
   )

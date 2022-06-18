@@ -1,0 +1,11 @@
+.blog-post {
+    overflow: hidden;
+}
+
+.blog-post>.row {
+    margin: -17px;
+}
+
+.blog-post>.row>.col {
+    padding: 17px;
+}

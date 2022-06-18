@@ -1,10 +1,9 @@
-import React from 'react'
 import MainiLayout from '../Layouts/MainLayout/MainLayout'
 import Header from '../Header/Header'
 import Slider from '../Slider/Slider'
 import ColumnLayout from '../Layouts/MainLayout/ColumnLayout'
 import Heading from '../Layouts/Heading/Heading'
-import { workout, muscle_building, weight_loss } from '../Navbar/NavbarData'
+import { workout, muscle_building, weight_loss, allPost } from '../../Database/Posts'
 import { Link } from 'react-router-dom'
 import './Home.css'
 import Home2 from './Home2/Home2'
@@ -14,8 +13,36 @@ import PostLayout1 from '../Layouts/PostsLayouts/PostLayout1/PostLayout1'
 import PostLayout2 from '../Layouts/PostsLayouts/PostLayout2/PostLayout2'
 import BlogPostRow from '../Layouts/BlogPostLayout/BlogPostRow'
 import BlogPostColumn from '../Layouts/BlogPostLayout/BlogPostColumn'
+import PostLayout3 from '../Layouts/PostsLayouts/PostLayout3/PostLayout3'
+import Pagination from './Pagination/Pagination'
+import { useNavigate, useParams } from "react-router-dom";
+import { db } from '../../Database/Firebase'
 
-const Home = () => {
+const Home = (props) => {
+
+  async function getCities(db) {
+    const citiesCol = collection(db, 'posts');
+    const citySnapshot = await getDocs(citiesCol);
+    const cityList = citySnapshot.docs.map(doc => doc.data());
+    return cityList;
+  }
+
+  getCities(db);
+
+  let navigate = useNavigate();
+  let { page } = useParams();
+  (window.location.pathname === (props.basename !==undefined ? props.basename : "/")) && (page = 1);
+
+  // define pagination rules
+  let perPagePost = 12;
+  let totalPage = Math.ceil(allPost.length / perPagePost);
+
+  const handlePageClick = ({ selected }) => {
+    if (selected + 1 >= 1 && selected + 1 <= totalPage) {
+      navigate(`/page/${selected + 1}`);
+    }
+  }
+
   return (
     <>
       <Header />
@@ -83,7 +110,7 @@ const Home = () => {
             <Heading color="secondary">
               Recent Post
             </Heading>
-            <PostLayout2 data={weight_loss.data.slice(0, 8)} date={true} hr={true} />
+            <PostLayout2 data={weight_loss.data.sort((a,b)=>b.date - a.date).slice(0, 8)} date={true} hr={true} />
           </div>
         </ColumnLayout>
 
@@ -92,13 +119,19 @@ const Home = () => {
 
       <div className='blog-post-wrapper'>
         <Heading color="secondary">
-          Latest Fitness Update
+          Latest Update
         </Heading>
         <BlogPostRow>
-          <BlogPostColumn>
-            Hello
-          </BlogPostColumn>
+          {allPost.slice(perPagePost * (page - 1), (perPagePost * page)).map((element, index) => {
+            return (
+              <BlogPostColumn key={index}>
+                <PostLayout3 data={element} />
+              </BlogPostColumn>
+            )
+          })}
         </BlogPostRow>
+        <Pagination pageCount={totalPage} handlePageClick={handlePageClick} page={page} />
+
       </div>
     </>
   )

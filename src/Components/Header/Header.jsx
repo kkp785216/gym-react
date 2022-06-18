@@ -24,7 +24,7 @@ const Header = () => {
         document.querySelector('nav').classList.remove('on');
       }
     }
-  }, [window.onscroll])
+  }, [])
 
   return (
     <>

@@ -1,55 +1,63 @@
 // "Import Fitness"
-import fitness_image1 from '../../Media/image/fitness/1.jpg'
-import fitness_image2 from '../../Media/image/fitness/2.jpg'
-import fitness_image3 from '../../Media/image/fitness/3.jpg'
-import fitness_image4 from '../../Media/image/fitness/4.jpg'
+import fitness_image1 from '../Media/image/fitness/2.jpg'
+import fitness_image2 from '../Media/image/fitness/2.jpg'
+import fitness_image3 from '../Media/image/fitness/3.jpg'
+import fitness_image4 from '../Media/image/fitness/4.jpg'
 
 // "Import Weight Loss"
-import weight_loss_image1 from '../../Media/image/weight_loss/1.jpg'
-import weight_loss_image2 from '../../Media/image/weight_loss/2.jpg'
-import weight_loss_image3 from '../../Media/image/weight_loss/3.jpg'
-import weight_loss_image4 from '../../Media/image/weight_loss/4.jpg'
-import weight_loss_image5 from '../../Media/image/weight_loss/5.jpg'
-import weight_loss_image6 from '../../Media/image/weight_loss/6.jpg'
-import weight_loss_image7 from '../../Media/image/weight_loss/7.jpg'
-import weight_loss_image8 from '../../Media/image/weight_loss/8.jpg'
-import weight_loss_image9 from '../../Media/image/weight_loss/9.jpg'
+import weight_loss_image1 from '../Media/image/weight_loss/1.jpg'
+import weight_loss_image2 from '../Media/image/weight_loss/2.jpg'
+import weight_loss_image3 from '../Media/image/weight_loss/3.jpg'
+import weight_loss_image4 from '../Media/image/weight_loss/4.jpg'
+import weight_loss_image5 from '../Media/image/weight_loss/5.jpg'
+import weight_loss_image6 from '../Media/image/weight_loss/6.jpg'
+import weight_loss_image7 from '../Media/image/weight_loss/7.jpg'
+import weight_loss_image8 from '../Media/image/weight_loss/8.jpg'
+import weight_loss_image9 from '../Media/image/weight_loss/9.jpg'
 
 // "Import Workout"
-import workout_image1 from '../../Media/image/workout/1.jpg'
-import workout_image2 from '../../Media/image/workout/2.jpg'
-import workout_image3 from '../../Media/image/workout/3.jpg'
-import workout_image4 from '../../Media/image/workout/4.jpg'
-import workout_image5 from '../../Media/image/workout/5.jpg'
-import workout_image6 from '../../Media/image/workout/6.jpg'
-import workout_image7 from '../../Media/image/workout/7.jpg'
-import workout_image8 from '../../Media/image/workout/8.jpg'
-import workout_image9 from '../../Media/image/workout/9.jpg'
+import workout_image1 from '../Media/image/workout/1.jpg'
+import workout_image2 from '../Media/image/workout/2.jpg'
+import workout_image3 from '../Media/image/workout/3.jpg'
+import workout_image4 from '../Media/image/workout/4.jpg'
+import workout_image5 from '../Media/image/workout/5.jpg'
+import workout_image6 from '../Media/image/workout/6.jpg'
+import workout_image7 from '../Media/image/workout/7.jpg'
+import workout_image8 from '../Media/image/workout/8.jpg'
+import workout_image9 from '../Media/image/workout/9.jpg'
 
 // "Import Yoga"
-import yoga_image1 from '../../Media/image/yoga/1.jpg'
-import yoga_image2 from '../../Media/image/yoga/2.jpg'
-import yoga_image3 from '../../Media/image/yoga/3.jpg'
-import yoga_image4 from '../../Media/image/yoga/4.jpg'
-import yoga_image5 from '../../Media/image/yoga/5.jpg'
+import yoga_image1 from '../Media/image/yoga/1.jpg'
+import yoga_image2 from '../Media/image/yoga/2.jpg'
+import yoga_image3 from '../Media/image/yoga/3.jpg'
+import yoga_image4 from '../Media/image/yoga/4.jpg'
+import yoga_image5 from '../Media/image/yoga/5.jpg'
+import yoga_image6 from '../Media/image/yoga/6.jpg'
+import yoga_image7 from '../Media/image/yoga/7.jpg'
+import yoga_image8 from '../Media/image/yoga/8.jpg'
+import yoga_image9 from '../Media/image/yoga/9.jpg'
 
 // "Import LifeStyle"
-import lifestyle_image1 from '../../Media/image/lifestyle/1.jpg'
-import lifestyle_image2 from '../../Media/image/lifestyle/2.jpg'
-import lifestyle_image3 from '../../Media/image/lifestyle/3.jpg'
-import lifestyle_image4 from '../../Media/image/lifestyle/4.jpg'
-import lifestyle_image5 from '../../Media/image/lifestyle/5.jpg'
+import lifestyle_image1 from '../Media/image/lifestyle/1.jpg'
+import lifestyle_image2 from '../Media/image/lifestyle/2.jpg'
+import lifestyle_image3 from '../Media/image/lifestyle/3.jpg'
+import lifestyle_image4 from '../Media/image/lifestyle/4.jpg'
+import lifestyle_image5 from '../Media/image/lifestyle/5.jpg'
+import lifestyle_image6 from '../Media/image/lifestyle/6.jpg'
+import lifestyle_image7 from '../Media/image/lifestyle/7.jpg'
+import lifestyle_image8 from '../Media/image/lifestyle/8.jpg'
+import lifestyle_image9 from '../Media/image/lifestyle/9.jpg'
 
 // "Import LifeStyle"
-import muscle_building_image1 from '../../Media/image/muscle_building/1.jpg'
-import muscle_building_image2 from '../../Media/image/muscle_building/2.jpg'
-import muscle_building_image3 from '../../Media/image/muscle_building/3.jpg'
-import muscle_building_image4 from '../../Media/image/muscle_building/4.jpg'
-import muscle_building_image5 from '../../Media/image/muscle_building/5.jpg'
-import muscle_building_image6 from '../../Media/image/muscle_building/6.jpg'
-import muscle_building_image7 from '../../Media/image/muscle_building/7.jpg'
-import muscle_building_image8 from '../../Media/image/muscle_building/8.jpg'
-import muscle_building_image9 from '../../Media/image/muscle_building/9.jpg'
+import muscle_building_image1 from '../Media/image/muscle_building/1.jpg'
+import muscle_building_image2 from '../Media/image/muscle_building/2.jpg'
+import muscle_building_image3 from '../Media/image/muscle_building/3.jpg'
+import muscle_building_image4 from '../Media/image/muscle_building/4.jpg'
+import muscle_building_image5 from '../Media/image/muscle_building/5.jpg'
+import muscle_building_image6 from '../Media/image/muscle_building/6.jpg'
+import muscle_building_image7 from '../Media/image/muscle_building/7.jpg'
+import muscle_building_image8 from '../Media/image/muscle_building/8.jpg'
+import muscle_building_image9 from '../Media/image/muscle_building/9.jpg'
 
 export const fitness =
 {
@@ -296,6 +304,38 @@ export const yoga =
       category: 'Yoga',
       categoryUrl: '/'
     },
+    {
+      image: yoga_image6,
+      title: 'Yoga: What You Need To Know Before You Start Your First Exercise',
+      url: '/',
+      date: 'October 16, 2019',
+      category: 'Yoga',
+      categoryUrl: '/'
+    },
+    {
+      image: yoga_image7,
+      title: 'Yoga For Upper Body Strength With This 30 Minutes Morning Exercise',
+      url: '/',
+      date: 'October 16, 2019',
+      category: 'Yoga',
+      categoryUrl: '/'
+    },
+    {
+      image: yoga_image8,
+      title: 'Finding Balance Through Yoga Workshop With This Super Easy Classes',
+      url: '/',
+      date: 'October 16, 2019',
+      category: 'Yoga',
+      categoryUrl: '/'
+    },
+    {
+      image: yoga_image9,
+      title: 'Wake Up Yoga – 11 Minute Morning Yoga Practice For A Better Day',
+      url: '/',
+      date: 'October 16, 2019',
+      category: 'Yoga',
+      categoryUrl: '/'
+    },
   ]
 }
 
@@ -343,7 +383,39 @@ export const lifestyle =
       date: 'October 16, 2019',
       category: 'Life Style',
       categoryUrl: '/'
-    }
+    },
+    {
+      image: lifestyle_image6,
+      title: 'The Best Post-workout Dry Shampoo For Your Super Sweaty Hair',
+      url: '/',
+      date: 'October 16, 2019',
+      category: 'Life Style',
+      categoryUrl: '/'
+    },
+    {
+      image: lifestyle_image7,
+      title: 'Emily Skye Shares Her Strength Workout That Builds Badass Muscle',
+      url: '/',
+      date: 'October 16, 2019',
+      category: 'Life Style',
+      categoryUrl: '/'
+    },
+    {
+      image: lifestyle_image8,
+      title: 'Stop Being Wishy-washy About Your Workouts To Improve Your Life',
+      url: '/',
+      date: 'October 16, 2019',
+      category: 'Life Style',
+      categoryUrl: '/'
+    },
+    {
+      image: lifestyle_image9,
+      title: '5 Ways To Change Your Life – For Good With This Simple & Detailed Guide',
+      url: '/',
+      date: 'October 16, 2019',
+      category: 'Life Style',
+      categoryUrl: '/'
+    },
   ]
 }
 
@@ -426,3 +498,14 @@ export const muscle_building =
     }
   ]
 }
+
+const tempall = [workout, muscle_building, weight_loss, lifestyle, yoga];
+export const allPost = [];
+tempall.forEach((element) => {
+  element.data.forEach((element) => {
+    allPost.push(element);
+  });
+});
+allPost.sort((a, b) => {
+  return (new Date(b.date) - new Date(a.date));
+});

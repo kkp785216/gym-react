@@ -1,11 +1,11 @@
-.main-layout{
+.main-layout {}
 
-}
-.column-layout{
+.column-layout {
     padding: 0 30px;
     flex: 0 0 auto;
     width: 25%;
 }
-.column-layout.middle{
+
+.column-layout.middle {
     width: 50%;
 }
