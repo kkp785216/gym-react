@@ -1,6 +1,5 @@
 import React, { useRef, useEffect } from 'react'
 import Navbar from '../Navbar/Navbar'
-import Logo from '../../Media/image/logo.png'
 import { Link } from 'react-router-dom'
 import './Header.css'
 import { IoSearch } from 'react-icons/io5'
@@ -15,14 +14,16 @@ const Header = () => {
 
   useEffect(() => {
     window.onscroll = () => {
-      if (window.scrollY === 0) {
-        document.querySelector('header').classList.add('on');
-        document.querySelector('nav').classList.add('on');
-      }
-      else {
-        document.querySelector('header').classList.remove('on');
-        document.querySelector('nav').classList.remove('on');
-      }
+      try{
+        if (window.scrollY === 0) {
+          document.querySelector('header').classList.add('on');
+          document.querySelector('nav').classList.add('on');
+        }
+        else {
+          document.querySelector('header').classList.remove('on');
+          document.querySelector('nav').classList.remove('on');
+        }
+      }catch{}
     }
   }, [])
 
@@ -31,7 +32,7 @@ const Header = () => {
       <header className='on'>
         <div className="header-wrapper d-flex justify-content-between position-relative">
           <div className="header-left">
-            <Link to="/"><img src={Logo} alt="" /></Link>
+            <Link to="/"><img src={"https://firebasestorage.googleapis.com/v0/b/fitness-gym-65c3e.appspot.com/o/logo.png?alt=media"} alt="" /></Link>
           </div>
           <div className="header-right d-flex">
             <Navbar />

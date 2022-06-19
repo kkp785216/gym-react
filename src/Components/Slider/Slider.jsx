@@ -5,18 +5,38 @@ import { Navigation, Autoplay } from 'swiper';
 import "swiper/css";
 import 'swiper/css/autoplay'
 import 'swiper/css/navigation';
-import { data } from './SliderData'
 import { Link } from 'react-router-dom'
+import { collection, getDocs } from 'firebase/firestore/lite';
+import { query, where, orderBy, limit } from "firebase/firestore";
+import { db } from '../../Database/FireStore'
 
 const Slider = () => {
+    const [featured, setFeatured] = useState([]);
 
-    const [newData, setNewData] = useState([]);
+    async function getAllPosts(db, lmt, coll) {
+        const citiesCol = collection(db, coll);
+        const q = query(citiesCol, where("categories", "array-contains-any", ["fitness"]), orderBy("date", "desc"), limit(lmt));
+        const citySnapshot = await getDocs(q);
+        const cityList = citySnapshot.docs.map(doc => doc.data());
+        return cityList;
+    }
+
     useEffect(() => {
-        let tempData = []
-        tempData.push(data.slice(0, 6));
-        tempData.push(data.slice(6, 12));
-        setNewData(tempData);
+        getAllPosts(db, 12, 'Posts')
+            .then((response) => {
+                let tempData = []
+                tempData.push(response.slice(0, 6));
+                tempData.push(response.slice(6, 12));
+                setFeatured(tempData);
+                console.log(tempData)
+            });
     }, []);
+
+    const dt = (date) => {
+        let d = new Date(date);
+        let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'Sepetember', 'October', 'November', 'December'];
+        return months[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear()
+      }
 
     return (
         <div className='my-5'>
@@ -25,10 +45,10 @@ const Slider = () => {
                 slidesPerView={1}
                 loop={true}
                 navigation
-                autoplay={{delay:5000, disableOnInteraction:false, pauseOnMouseEnter:true}}
+                autoplay={{ delay: 5000, disableOnInteraction: false, pauseOnMouseEnter: true }}
 
             >
-                {newData.map((element, index) => {
+                {featured.map((element, index) => {
                     return (
                         <SwiperSlide key={index}>
                             <div className="slider-wrapper">
@@ -39,10 +59,10 @@ const Slider = () => {
                                                 <div className="slider_img_box position-relative">
                                                     <Link to={element.url}><img src={element.image} alt="" /></Link>
                                                     <div className="slider-content position-absolute start-0 end-0 bottom-0">
-                                                        <h3><Link to={element.url}>{element.title}</Link></h3>
+                                                        <h3><Link to={"/"+element.url}>{element.title}</Link></h3>
                                                         <div className='slider-date text-center'>
-                                                            <span>{element.date} - </span>
-                                                            <span> {element.comments} comment</span>
+                                                            <span>{dt(element.date)} - </span>
+                                                            <span> 0 comment</span>
                                                         </div>
                                                     </div>
                                                 </div>
