@@ -3,7 +3,7 @@ import Header from '../Header/Header'
 import Slider from '../Slider/Slider'
 import ColumnLayout from '../Layouts/MainLayout/ColumnLayout'
 import Heading from '../Layouts/Heading/Heading'
-import { workout, muscle_building, weight_loss, allPost } from '../../Database/Posts'
+import { workout, muscle_building, weight_loss, allPosts } from '../../Database/SortedPosts'
 import { Link } from 'react-router-dom'
 import './Home.css'
 import Home2 from './Home2/Home2'
@@ -26,7 +26,7 @@ const Home = (props) => {
 
   // define pagination rules
   let perPagePost = 12;
-  let totalPage = Math.ceil(allPost.length / perPagePost);
+  let totalPage = Math.ceil(allPosts.length / perPagePost);
 
   const handlePageClick = ({ selected }) => {
     if (selected + 1 >= 1 && selected + 1 <= totalPage) {
@@ -56,10 +56,10 @@ const Home = (props) => {
           {/* Home - 1 */}
           <div>
             <Heading color="primary">
-              {workout.category}
+              Workout
             </Heading>
             <div className="row home1">
-              {workout.data.slice(0, 9).map((element, index) => {
+              {workout.slice(0, 9).map((element, index) => {
                 return (
                   <div className="col col-4" key={index}>
                     <Link to={element.url}><img src={element.image} alt="" /></Link>
@@ -74,9 +74,9 @@ const Home = (props) => {
           {/* Home - 2 */}
           <div>
             <Heading color="primary">
-              {muscle_building.category}
+              Muscle Building
             </Heading>
-            <Home2 data={muscle_building.data.slice(0, 6)} />
+            <Home2 data={muscle_building.slice(0, 6)} />
           </div>
 
           {/* Home - 3 */}
@@ -84,7 +84,7 @@ const Home = (props) => {
             <Heading color="primary">
               {weight_loss.category}
             </Heading>
-            <PostLayout1 data={weight_loss.data.slice(0, 8)} className="home3" date={false} />
+            <PostLayout1 data={weight_loss.slice(0, 8)} className="home3" date={false} />
           </div>
 
         </ColumnLayout>
@@ -101,7 +101,7 @@ const Home = (props) => {
             <Heading color="secondary">
               Recent Post
             </Heading>
-            <PostLayout2 data={weight_loss.data.sort((a,b)=>b.date - a.date).slice(0, 8)} date={true} hr={true} />
+            <PostLayout2 data={allPosts.slice(0, 8)} date={true} hr={true} />
           </div>
         </ColumnLayout>
 
@@ -113,7 +113,7 @@ const Home = (props) => {
           Latest Update
         </Heading>
         <BlogPostRow>
-          {allPost.slice(perPagePost * (page - 1), (perPagePost * page)).map((element, index) => {
+          {allPosts.slice(perPagePost * (page - 1), (perPagePost * page)).map((element, index) => {
             return (
               <BlogPostColumn key={index}>
                 <PostLayout3 data={element} />

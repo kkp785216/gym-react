@@ -48,7 +48,7 @@ const MegaMenu = (props) => {
                                                 <div className="col p-0" key={index}>
                                                     <div className="mega-img-box position-relative">
                                                         <Link to={element.url}><img src={element.image} width="100%" height="100%" alt="" /></Link>
-                                                        <Link className='position-absolute start-0 bottom-0' to={element.categoryUrl}>{element.category}</Link>
+                                                        <Link className='position-absolute start-0 bottom-0' to={element.category_id.url}>{element.category_id.name}</Link>
                                                     </div>
                                                     <div className='mega-text-content'>
                                                         <h3>
@@ -65,12 +65,12 @@ const MegaMenu = (props) => {
                         </div>
                     </div>
                 }
-                {data && data.data.slice(0, 5).map((element, index) => {
+                {data && data.slice(0, 5).map((element, index) => {
                     return (
                         <div className="col p-0" key={index}>
                             <div className="mega-img-box position-relative">
                                 <Link to={element.url}><img src={element.image} width="100%" height="100%" alt="" /></Link>
-                                <Link className='position-absolute start-0 bottom-0' to={element.categoryUrl}>{element.category}</Link>
+                                <Link className='position-absolute start-0 bottom-0' to={element.category_id.url}>{element.category_id.name}</Link>
                             </div>
                             <div className='mega-text-content'>
                                 <h3>

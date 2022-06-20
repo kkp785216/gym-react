@@ -20,7 +20,7 @@ const Home2 = ({ data }) => {
                 navigation
                 autoplay={{delay:5000, disableOnInteraction:false, pauseOnMouseEnter:true}}
             >
-                {data.slice(0, 9).map((element, index) => {
+                {data.slice(0, 6).map((element, index) => {
                     return (
                         <SwiperSlide key={index}>
                             <Link to={element.url}><img src={element.image} alt="" /></Link>

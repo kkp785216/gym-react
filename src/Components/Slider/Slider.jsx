@@ -5,7 +5,7 @@ import { Navigation, Autoplay } from 'swiper';
 import "swiper/css";
 import 'swiper/css/autoplay'
 import 'swiper/css/navigation';
-import { data } from './SliderData'
+import { featured } from '../../Database/SortedPosts';
 import { Link } from 'react-router-dom'
 
 const Slider = () => {
@@ -13,8 +13,8 @@ const Slider = () => {
     const [newData, setNewData] = useState([]);
     useEffect(() => {
         let tempData = []
-        tempData.push(data.slice(0, 6));
-        tempData.push(data.slice(6, 12));
+        tempData.push(featured.slice(0, 6));
+        tempData.push(featured.slice(6, 12));
         setNewData(tempData);
     }, []);
 
@@ -25,7 +25,7 @@ const Slider = () => {
                 slidesPerView={1}
                 loop={true}
                 navigation
-                autoplay={{delay:5000, disableOnInteraction:false, pauseOnMouseEnter:true}}
+                autoplay={{ delay: 5000, disableOnInteraction: false, pauseOnMouseEnter: true }}
 
             >
                 {newData.map((element, index) => {
@@ -42,7 +42,7 @@ const Slider = () => {
                                                         <h3><Link to={element.url}>{element.title}</Link></h3>
                                                         <div className='slider-date text-center'>
                                                             <span>{element.date} - </span>
-                                                            <span> {element.comments} comment</span>
+                                                            <span> 0 comment</span>
                                                         </div>
                                                     </div>
                                                 </div>

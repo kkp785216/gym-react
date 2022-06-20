@@ -5,7 +5,7 @@ import Heading from '../../Layouts/Heading/Heading'
 import ColumnLayout from '../../Layouts/MainLayout/ColumnLayout'
 import MainiLayout from '../../Layouts/MainLayout/MainLayout'
 import SocialConnect from '../../Layouts/SocialConnect/SocialConnect'
-import { weight_loss } from '../../../Database/Posts'
+import { weight_loss } from '../../../Database/SortedPosts'
 import PostLayout2 from '../../Layouts/PostsLayouts/PostLayout2/PostLayout2'
 
 const Posts = () => {
@@ -27,7 +27,7 @@ const Posts = () => {
             <Heading color="secondary">
               Featured Posts(Edit)
             </Heading>
-            <PostLayout2 data={weight_loss.data.slice(0, 8)} date={true} hr={true} />
+            <PostLayout2 data={weight_loss.slice(0, 8)} date={true} hr={true} />
           </div>
 
           <div>
@@ -66,7 +66,7 @@ const Posts = () => {
             <Heading color="secondary">
               Recent Post
             </Heading>
-            <PostLayout2 data={weight_loss.data.slice(0, 8)} date={true} hr={true} />
+            <PostLayout2 data={weight_loss.slice(0, 8)} date={true} hr={true} />
           </div>
         </ColumnLayout>
 
