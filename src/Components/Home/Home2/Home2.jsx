@@ -23,8 +23,8 @@ const Home2 = ({ data }) => {
                 {data.slice(0, 9).map((element, index) => {
                     return (
                         <SwiperSlide key={index}>
-                            <Link to={"/"+element.url}><img src={element.image} alt="" /></Link>
-                            <h3><Link to={"/"+element.url}>{element.title}</Link></h3>
+                            <Link to={element.url}><img src={element.image} alt="" /></Link>
+                            <h3><Link to={element.url}>{element.title}</Link></h3>
                             <span>{element.date}</span>
                         </SwiperSlide>
                     )
