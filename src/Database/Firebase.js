@@ -18,7 +18,7 @@
     
 //     // Get a list of cities from your database
 //     async function getCities(db) {
-//         const citiesCol = collection(db, 'Posts');
+//         const citiesCol = collection(db, 'Categories');
 //         const q = query(citiesCol, orderBy("date", "asc"));
 //         const citySnapshot = await getDocs(q);
 //         const cityList = citySnapshot.docs.map(doc => doc.data());

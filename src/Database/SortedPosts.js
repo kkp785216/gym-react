@@ -1,3 +1,6 @@
+// Import Categories
+import { Categories } from './Categories'
+
 // "Import Weight Loss"
 import weight_loss_image1 from '../Media/image/weight_loss/1.jpg'
 import weight_loss_image2 from '../Media/image/weight_loss/2.jpg'
@@ -114,103 +117,64 @@ const dt = (date) => {
     let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'Sepetember', 'October', 'November', 'December'];
     return months[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear()
 }
+const rtnCategory = (input) => {
+    let catJson = JSON.stringify(Categories);
+    let catObj = JSON.parse(catJson);
+    return catObj[input];
+}
 const initialPosts = [
     {
         "url": "stick-to-your-workout-routine-top-tips-from-real-women-in-real-life",
-        "date": "June 18, 2022",
+        "date": 1655558932872,
         "title": "Stick to Your Workout Routine: Top Tips from Real Women In Real Life",
-        "big_img": "/react4/static/media/9.9cbba0d384572df649eb.jpg",
+        "big_img": workout_big_image9,
         "author": "krishna",
         "categories": [
-            {
-                "name": "Featured",
-                "url": "featured",
-                "id": "featured"
-            },
-            {
-                "name": "Workout",
-                "url": "workout",
-                "id": "workout"
-            },
-            {
-                "name": "Fitness",
-                "url": "fitness",
-                "id": "fitness"
-            }
+            "featured",
+            "workout",
+            "fitness"
         ],
-        "image": "/react4/static/media/9.e89353f8a2079f8b3fad.jpg",
+        "image": workout_image9,
         "tags": [
             "fitness",
             "news"
         ],
-        "category_id": {
-            "name": "Workout",
-            "url": "workout",
-            "id": "workout"
-        }
+        "category_id": "workout"
     },
     {
         "categories": [
-            {
-                "name": "Yoga",
-                "url": "yoga",
-                "id": "yoga"
-            },
-            {
-                "name": "Featured",
-                "url": "featured",
-                "id": "featured"
-            }
+            "yoga",
+            "featured"
         ],
         "title": "Wake Up Yoga – 11 Minute Morning Yoga Practice For A Better Day",
         "url": "wake-up-yoga-11-minute-morning-yoga-practice-for-a-better-day",
-        "image": "/react4/static/media/9.6c192011cc15b24473ad.jpg",
+        "image": yoga_image9,
         "tags": [
             "fitness",
             "news"
         ],
         "author": "krishna",
-        "category_id": {
-            "name": "Yoga",
-            "url": "yoga",
-            "id": "yoga"
-        },
-        "date": "June 18, 2022",
-        "big_img": "/react4/static/media/9.8c7bb37b3cd6090dfee7.jpg"
+        "category_id": "yoga",
+        "date": 1655559133938,
+        "big_img": yoga_big_image9
     },
     {
         "tags": [
             "fitness",
             "news"
         ],
-        "category_id": {
-            "name": "Weight Loss",
-            "url": "weight-loss",
-            "id": "weight_loss"
-        },
+        "category_id": "weight_loss",
         "categories": [
-            {
-                "name": "Featured",
-                "url": "featured",
-                "id": "featured"
-            },
-            {
-                "name": "Weight Loss",
-                "url": "weight-loss",
-                "id": "weight_loss"
-            },
-            {
-                "name": "Fitness",
-                "url": "fitness",
-                "id": "fitness"
-            }
+            "featured",
+            "weight_loss",
+            "fitness"
         ],
-        "date": "June 18, 2022",
+        "date": 1655559591936,
         "url": "30-ways-to-stay-active-calories-without-even-trying-in-busy-days",
-        "big_img": "/react4/static/media/9.7fe4ce2aac2dcf762119.jpg",
+        "big_img": weight_loss_big_image9,
         "author": "krishna",
         "title": "30 Ways to Stay Active Calories Without Even Trying In Busy Days",
-        "image": "/react4/static/media/9.a4bd91bc73ed0bd27feb.jpg"
+        "image": weight_loss_image9
     },
     {
         "tags": [
@@ -218,221 +182,121 @@ const initialPosts = [
             "news"
         ],
         "categories": [
-            {
-                "name": "Featured",
-                "url": "featured",
-                "id": "featured"
-            },
-            {
-                "name": "Lifestyle",
-                "url": "lifestyle",
-                "id": "lifestyle"
-            }
+            "featured",
+            "lifestyle"
         ],
         "title": "5 Ways to Change Your Life – for Good With This Simple & Detailed Guide",
-        "date": "June 18, 2022",
-        "category_id": {
-            "name": "Lifestyle",
-            "url": "lifestyle",
-            "id": "lifestyle"
-        },
+        "date": 1655559836945,
+        "category_id": "lifestyle",
         "url": "5-ways-to-change-your-life-for-good-with-this-simple-detailed-guide",
-        "image": "/react4/static/media/9.c7fe64f8c0f9364301ca.jpg",
+        "image": lifestyle_image9,
         "author": "krishna",
-        "big_img": "/react4/static/media/9.aea865401232fb98299b.jpg"
+        "big_img": lifestyle_big_image9
     },
     {
-        "image": "/react4/static/media/9.977a209a6c21c34768fa.jpg",
+        "image": muscle_building_image9,
         "url": "how-to-gain-muscle-fast-10-tips-for-men-for-protein-synthesis",
         "author": "krishna",
         "tags": [
             "fitness",
             "news"
         ],
-        "category_id": {
-            "name": "Muscle Building",
-            "url": "muscle-building",
-            "id": "muscle_building"
-        },
+        "category_id": "muscle_building",
         "categories": [
-            {
-                "name": "Featured",
-                "url": "featured",
-                "id": "featured"
-            },
-            {
-                "name": "Muscle Building",
-                "url": "muscle-building",
-                "id": "muscle_building"
-            },
-            {
-                "name": "Fitness",
-                "url": "fitness",
-                "id": "fitness"
-            }
+            "featured",
+            "muscle_building",
+            "fitness"
         ],
-        "big_img": "/react4/static/media/9.d2fea1f98edc3dc1fca8.jpg",
-        "date": "June 18, 2022",
+        "big_img": muscle_building_big_image9,
+        "date": 1655560015955,
         "title": "How to Gain Muscle Fast – 10 Tips for Men for Protein Synthesis"
     },
     {
         "author": "krishna",
         "title": "How Much Weight Can You Lose in a Month With Effective Fitness",
         "categories": [
-            {
-                "name": "Featured",
-                "url": "featured",
-                "id": "featured"
-            },
-            {
-                "name": "Weight Loss",
-                "url": "weight-loss",
-                "id": "weight_loss"
-            },
-            {
-                "name": "Fitness",
-                "url": "fitness",
-                "id": "fitness"
-            }
+            "featured",
+            "weight_loss",
+            "fitness"
         ],
-        "big_img": "/react4/static/media/8.b0ef8d333a4970f730ec.jpg",
-        "category_id": {
-            "name": "Weight Loss",
-            "url": "weight-loss",
-            "id": "weight_loss"
-        },
+        "big_img": weight_loss_big_image8,
+        "category_id": "weight_loss",
         "url": "how-much-weight-can-you-lose-in-a-month-with-effective-fitness",
-        "image": "/react4/static/media/8.e91e4d1552f60f2a9105.jpg",
-        "date": "June 18, 2022",
+        "image": weight_loss_image8,
+        "date": 1655560533888,
         "tags": [
             "fitness",
             "news"
         ]
     },
     {
-        "big_img": "/react4/static/media/8.13ef15faa2bee44ec71d.jpg",
-        "date": "June 18, 2022",
+        "big_img": workout_big_image8,
+        "date": 1655560793371,
         "tags": [
             "fitness",
             "news"
         ],
-        "image": "/react4/static/media/8.e435163b3078342e8746.jpg",
+        "image": workout_image8,
         "url": "when-its-ok-to-work-the-same-muscles-back-to-back-with-this-guide",
         "author": "krishna",
         "title": "When It’s OK to Work the Same Muscles Back to Back With This Guide",
         "categories": [
-            {
-                "name": "Featured",
-                "url": "featured",
-                "id": "featured"
-            },
-            {
-                "name": "Workout",
-                "url": "workout",
-                "id": "workout"
-            },
-            {
-                "name": "Fitness",
-                "url": "fitness",
-                "id": "fitness"
-            }
+            "featured",
+            "workout",
+            "fitness"
         ],
-        "category_id": {
-            "name": "Workout",
-            "url": "workout",
-            "id": "workout"
-        }
+        "category_id": "workout"
     },
     {
-        "big_img": "/react4/static/media/8.7bb03a0102693e7e3487.jpg",
+        "big_img": yoga_big_image8,
         "title": "Finding Balance Through Yoga Workshop With This Super Easy Classes",
-        "image": "/react4/static/media/8.50035bb2edf64cb7fae7.jpg",
+        "image": yoga_image8,
         "url": "finding-balance-through-yoga-workshop-with-this-super-easy-classes",
         "categories": [
-            {
-                "name": "Yoga",
-                "url": "yoga",
-                "id": "yoga"
-            },
-            {
-                "name": "Featured",
-                "url": "featured",
-                "id": "featured"
-            }
+            "yoga",
+            "featured"
         ],
-        "category_id": {
-            "name": "Yoga",
-            "url": "yoga",
-            "id": "yoga"
-        },
+        "category_id": "yoga",
         "author": "krishna",
         "tags": [
             "fitness",
             "news"
         ],
-        "date": "June 18, 2022"
+        "date": 1655561275396
     },
     {
-        "big_img": "/react4/static/media/8.400f69cc5b053dc04479.jpg",
-        "category_id": {
-            "name": "Lifestyle",
-            "url": "lifestyle",
-            "id": "lifestyle"
-        },
-        "image": "/react4/static/media/8.6106bf99e3177119eb77.jpg",
+        "big_img": lifestyle_big_image8,
+        "category_id": "lifestyle",
+        "image": lifestyle_image8,
         "author": "krishna",
         "title": "Stop Being Wishy-Washy About Your Workouts To Improve Your Life",
         "categories": [
-            {
-                "name": "Featured",
-                "url": "featured",
-                "id": "featured"
-            },
-            {
-                "name": "Lifestyle",
-                "url": "lifestyle",
-                "id": "lifestyle"
-            }
+            "featured",
+            "lifestyle"
         ],
         "url": "stop-being-wishy-washy-about-your-workouts-to-improve-your-life",
         "tags": [
             "fitness",
             "news"
         ],
-        "date": "June 18, 2022"
+        "date": 1655561998886
     },
     {
         "url": "the-10-principles-to-pack-on-muscle-with-a-busy-schedule-of-a-full-life",
         "title": "The 10 Principles to Pack On Muscle With A Busy Schedule Of A Full Life",
-        "category_id": {
-            "name": "Muscle Building",
-            "url": "muscle-building",
-            "id": "muscle_building"
-        },
-        "image": "/react4/static/media/8.751ab90a3e3e2f57ebb0.jpg",
+        "category_id": "muscle_building",
+        "image": muscle_building_image8,
         "author": "krishna",
-        "date": "June 18, 2022",
+        "date": 1655562199883,
         "tags": [
             "fitness",
             "news"
         ],
-        "big_img": "/react4/static/media/8.7c518f18c0bdd2544a52.jpg",
+        "big_img": muscle_building_big_image8,
         "categories": [
-            {
-                "name": "Featured",
-                "url": "featured",
-                "id": "featured"
-            },
-            {
-                "name": "Muscle Building",
-                "url": "muscle-building",
-                "id": "muscle_building"
-            },
-            {
-                "name": "Fitness",
-                "url": "fitness",
-                "id": "fitness"
-            }
+            "featured",
+            "muscle_building",
+            "fitness"
         ]
     },
     {
@@ -442,61 +306,33 @@ const initialPosts = [
         ],
         "author": "krishna",
         "title": "The Lose 10 Pounds in a Month Diet Plan (That’s You’ll Actually Want)",
-        "image": "/react4/static/media/7.093572ee5b875cbc7e97.jpg",
+        "image": weight_loss_image7,
         "categories": [
-            {
-                "name": "Featured",
-                "url": "featured",
-                "id": "featured"
-            },
-            {
-                "name": "Weight Loss",
-                "url": "weight-loss",
-                "id": "weight_loss"
-            },
-            {
-                "name": "Fitness",
-                "url": "fitness",
-                "id": "fitness"
-            }
+            "featured",
+            "weight_loss",
+            "fitness"
         ],
-        "big_img": "/react4/static/media/7.adaf02b16d569632332d.jpg",
+        "big_img": weight_loss_big_image7,
         "url": "the-lose-10-pounds-in-a-month-diet-plan-thats-youll-actually-want-to-follow",
-        "category_id": {
-            "name": "Weight Loss",
-            "url": "weight-loss",
-            "id": "weight_loss"
-        },
-        "date": "June 18, 2022"
+        "category_id": "weight_loss",
+        "date": 1655562434894
     },
     {
-        "image": "/react4/static/media/3.8c38ea87e568b8c6beb5.jpg",
-        "date": "June 18, 2022",
+        "image": muscle_building_image3,
+        "date": 1655562599093,
         "categories": [
-            {
-                "name": "Muscle Building",
-                "url": "muscle-building",
-                "id": "muscle_building"
-            },
-            {
-                "name": "Fitness",
-                "url": "fitness",
-                "id": "fitness"
-            }
+            "muscle_building",
+            "fitness"
         ],
         "title": "9 Killer Ways To Gain Muscle Naturally Without Breaking Too Much Sweat",
         "author": "krishna",
         "url": "9-killer-ways-to-gain-muscle-naturally-without-breaking-too-much-sweat",
-        "category_id": {
-            "name": "Muscle Building",
-            "url": "muscle-building",
-            "id": "muscle_building"
-        },
+        "category_id": "muscle_building",
         "tags": [
             "fitness",
             "news"
         ],
-        "big_img": "/react4/static/media/3.233ea2299d83a5d95362.jpg"
+        "big_img": muscle_building_big_image3
     },
     {
         "tags": [
@@ -504,42 +340,26 @@ const initialPosts = [
             "news"
         ],
         "categories": [
-            {
-                "name": "Yoga",
-                "url": "yoga",
-                "id": "yoga"
-            }
+            "yoga"
         ],
-        "date": "June 18, 2022",
+        "date": 1655562703895,
         "title": "Yoga For Upper Body Strength With This 30 Minutes Morning Exercise",
-        "image": "/react4/static/media/7.6b30653c8c41b86f80a0.jpg",
-        "big_img": "/react4/static/media/7.dd67e9a2293c37eb0296.jpg",
-        "category_id": {
-            "name": "Yoga",
-            "url": "yoga",
-            "id": "yoga"
-        },
+        "image": yoga_image7,
+        "big_img": yoga_big_image7,
+        "category_id": "yoga",
         "author": "krishna",
         "url": "yoga-for-upper-body-strength-with-this-30-minutes-morning-exercise"
     },
     {
         "categories": [
-            {
-                "name": "Yoga",
-                "url": "yoga",
-                "id": "yoga"
-            }
+            "yoga"
         ],
         "url": "yoga-what-you-need-to-know-before-you-start-your-first-exercise",
-        "big_img": "/react4/static/media/6.c61e5a1bcec3002e1dd3.jpg",
-        "category_id": {
-            "name": "Yoga",
-            "url": "yoga",
-            "id": "yoga"
-        },
+        "big_img": yoga_big_image6,
+        "category_id": "yoga",
         "author": "krishna",
-        "image": "/react4/static/media/6.c6806df87a96a7b85fe5.jpg",
-        "date": "June 18, 2022",
+        "image": yoga_image6,
+        "date": 1655562836850,
         "title": "Yoga: What You Need To Know Before You Start Your First Exercise",
         "tags": [
             "fitness",
@@ -548,15 +368,11 @@ const initialPosts = [
     },
     {
         "categories": [
-            {
-                "name": "Yoga",
-                "url": "yoga",
-                "id": "yoga"
-            }
+            "yoga"
         ],
-        "image": "/react4/static/media/5.158bdbfe857782f8b378.jpg",
-        "date": "June 18, 2022",
-        "big_img": "/react4/static/media/5.f34e3897f9b3f0a15bea.jpg",
+        "image": yoga_image5,
+        "date": 1655565458763,
+        "big_img": yoga_big_image5,
         "title": "Using Yoga to Stretch the Mind For A Mindfulness Lifestyle Today",
         "author": "krishna",
         "url": "using-yoga-to-stretch-the-mind-for-a-mindfulness-lifestyle-today",
@@ -564,165 +380,101 @@ const initialPosts = [
             "fitness",
             "news"
         ],
-        "category_id": {
-            "name": "Yoga",
-            "url": "yoga",
-            "id": "yoga"
-        }
+        "category_id": "yoga"
     },
     {
-        "big_img": "/react4/static/media/7.4d716f6faed9cd12679a.jpg",
-        "date": "June 18, 2022",
+        "big_img": lifestyle_big_image7,
+        "date": 1655565681885,
         "categories": [
-            {
-                "name": "Lifestyle",
-                "url": "lifestyle",
-                "id": "lifestyle"
-            }
+            "lifestyle"
         ],
         "tags": [
             "news"
         ],
-        "image": "/react4/static/media/7.b36656050233ae3fe0d4.jpg",
-        "category_id": {
-            "name": "Lifestyle",
-            "url": "lifestyle",
-            "id": "lifestyle"
-        },
+        "image": lifestyle_image7,
+        "category_id": "lifestyle",
         "title": "Emily Skye Shares Her Strength Workout That Builds Badass Muscle",
         "url": "emily-skye-shares-her-strength-workout-that-builds-badass-muscle",
         "author": "krishna"
     },
     {
-        "category_id": {
-            "name": "Lifestyle",
-            "url": "lifestyle",
-            "id": "lifestyle"
-        },
-        "image": "/react4/static/media/6.404de14b06b1d4b8f06f.jpg",
+        "category_id": "lifestyle",
+        "image": lifestyle_image6,
         "title": "The Best Post-Workout Dry Shampoo for Your Super Sweaty Hair",
-        "big_img": "/react4/static/media/6.7b6221995ea1c83f8600.jpg",
+        "big_img": lifestyle_big_image6,
         "tags": [
             "news"
         ],
         "url": "the-best-post-workout-dry-shampoo-for-your-super-sweaty-hair",
         "author": "krishna",
-        "date": "June 18, 2022",
+        "date": 1655565864210,
         "categories": [
-            {
-                "name": "Lifestyle",
-                "url": "lifestyle",
-                "id": "lifestyle"
-            }
+            "lifestyle"
         ]
     },
     {
         "title": "Science Says These Apps Can Really Fight Anxiety and Depression",
         "author": "krishna",
-        "image": "/react4/static/media/5.b1cdf202c85848da4363.jpg",
-        "big_img": "/react4/static/media/5.d55783710fbc908fba0d.jpg",
+        "image": lifestyle_image5,
+        "big_img": lifestyle_big_image5,
         "url": "science-says-these-apps-can-really-fight-anxiety-and-depression",
-        "category_id": {
-            "name": "Lifestyle",
-            "url": "lifestyle",
-            "id": "lifestyle"
-        },
+        "category_id": "lifestyle",
         "categories": [
-            {
-                "name": "Lifestyle",
-                "url": "lifestyle",
-                "id": "lifestyle"
-            }
+            "lifestyle"
         ],
         "tags": [
             "news"
         ],
-        "date": "June 18, 2022"
+        "date": 1655566027738
     },
     {
-        "image": "/react4/static/media/7.8a662170e978479be3ce.jpg",
+        "image": muscle_building_image7,
         "categories": [
-            {
-                "name": "Muscle Building",
-                "url": "muscle-building",
-                "id": "muscle_building"
-            },
-            {
-                "name": "Fitness",
-                "url": "fitness",
-                "id": "fitness"
-            }
+            "muscle_building",
+            "fitness"
         ],
         "tags": [
             "news"
         ],
         "author": "krishna",
-        "big_img": "/react4/static/media/7.fcb091a8e7f883830c48.jpg",
-        "date": "June 18, 2022",
-        "category_id": {
-            "name": "Muscle Building",
-            "url": "muscle-building",
-            "id": "muscle_building"
-        },
+        "big_img": muscle_building_big_image7,
+        "date": 1655566324148,
+        "category_id": "muscle_building",
         "title": "Building Muscle Simplified: Not as Complicated as you Think",
         "url": "building-muscle-simplified-not-as-complicated-as-you-think"
     },
     {
         "title": "The 15 Most Basic Facts About Building More Muscle For Beginners",
         "categories": [
-            {
-                "name": "Muscle Building",
-                "url": "muscle-building",
-                "id": "muscle_building"
-            },
-            {
-                "name": "Fitness",
-                "url": "fitness",
-                "id": "fitness"
-            }
+            "muscle_building",
+            "fitness"
         ],
         "tags": [
             "fitness",
             "news"
         ],
-        "image": "/react4/static/media/6.b016094516233b923a1e.jpg",
+        "image": muscle_building_image6,
         "url": "the-15-most-basic-facts-about-building-more-muscle-for-beginners",
         "author": "krishna",
-        "category_id": {
-            "name": "Muscle Building",
-            "url": "muscle-building",
-            "id": "muscle_building"
-        },
-        "date": "June 18, 2022",
-        "big_img": "/react4/static/media/6.bbd2545f455e9c689041.jpg"
+        "category_id": "muscle_building",
+        "date": 1655566452886,
+        "big_img": muscle_building_big_image6
     },
     {
         "categories": [
-            {
-                "name": "Muscle Building",
-                "url": "muscle-building",
-                "id": "muscle_building"
-            },
-            {
-                "name": "Fitness",
-                "url": "fitness",
-                "id": "fitness"
-            }
+            "muscle_building",
+            "fitness"
         ],
         "url": "the-6-best-supplements-to-gain-muscle-you-should-consider-now",
-        "image": "/react4/static/media/5.dc4abc08e14f3db56c19.jpg",
+        "image": muscle_building_image5,
         "title": "The 6 Best Supplements to Gain Muscle You Should Consider Now",
         "tags": [
             "fitness",
             "news"
         ],
-        "category_id": {
-            "name": "Muscle Building",
-            "url": "muscle-building",
-            "id": "muscle_building"
-        },
-        "big_img": "/react4/static/media/5.03f03cefd28e13c3ef99.jpg",
-        "date": "June 18, 2022",
+        "category_id": "muscle_building",
+        "big_img": muscle_building_big_image5,
+        "date": 1655566528885,
         "author": "krishna"
     },
     {
@@ -732,85 +484,49 @@ const initialPosts = [
         ],
         "url": "how-to-lose-belly-fat-in-2-weeks-with-the-zero-belly-diet-made-for-you",
         "author": "krishna",
-        "category_id": {
-            "name": "Weight Loss",
-            "url": "weight-loss",
-            "id": "weight_loss"
-        },
-        "big_img": "/react4/static/media/6.dec2a7dbfdfa5f916e4a.jpg",
-        "date": "June 18, 2022",
+        "category_id": "weight_loss",
+        "big_img": weight_loss_big_image6,
+        "date": 1655566702924,
         "categories": [
-            {
-                "name": "Weight Loss",
-                "url": "weight-loss",
-                "id": "weight_loss"
-            },
-            {
-                "name": "Fitness",
-                "url": "fitness",
-                "id": "fitness"
-            }
+            "weight_loss",
+            "fitness"
         ],
-        "image": "/react4/static/media/6.2bad850dc7bed76fc69f.jpg",
+        "image": weight_loss_image6,
         "title": "How to Lose Belly Fat In 2 Weeks with the Zero Belly Diet Made For You"
     },
     {
         "url": "exercise-is-the-least-important-part-of-a-weight-loss-transformation",
         "author": "krishna",
-        "date": "June 18, 2022",
+        "date": 1655566765881,
         "title": "Exercise Is the Least Important Part of a Weight-Loss Transformation",
         "tags": [
             "fitness",
             "news"
         ],
-        "big_img": "/react4/static/media/5.b37d7a9570281115e116.jpg",
-        "category_id": {
-            "name": "Weight Loss",
-            "url": "weight-loss",
-            "id": "weight_loss"
-        },
+        "big_img": weight_loss_big_image5,
+        "category_id": "weight_loss",
         "categories": [
-            {
-                "name": "Weight Loss",
-                "url": "weight-loss",
-                "id": "weight_loss"
-            },
-            {
-                "name": "Fitness",
-                "url": "fitness",
-                "id": "fitness"
-            }
+            "weight_loss",
+            "fitness"
         ],
-        "image": "/react4/static/media/5.b74d168e5c76b99bbe7a.jpg"
+        "image": weight_loss_image5
     },
     {
         "url": "10-unbelievable-diet-rules-backed-by-science-you-should-know",
         "author": "krishna",
         "title": "10 Unbelievable Diet Rules Backed by Science You Should Know",
-        "image": "/react4/static/media/4.4c16437c65c19f8be68d.jpg",
-        "date": "June 18, 2022",
+        "image": weight_loss_image4,
+        "date": 1655566825727,
         "categories": [
-            {
-                "name": "Weight Loss",
-                "url": "weight-loss",
-                "id": "weight_loss"
-            },
-            {
-                "name": "Fitness",
-                "url": "fitness",
-                "id": "fitness"
-            }
+            "weight_loss",
+            "fitness"
         ],
         "tags": [
             "fitness",
             "news"
         ],
-        "big_img": "/react4/static/media/4.f653e4afeba684a66085.jpg",
-        "category_id": {
-            "name": "Weight Loss",
-            "url": "weight-loss",
-            "id": "weight_loss"
-        }
+        "big_img": weight_loss_big_image4,
+        "category_id": "weight_loss"
     },
     {
         "title": "The Best Outer-Thigh Exercises and Cardio Workouts For Your Fitness",
@@ -818,52 +534,28 @@ const initialPosts = [
             "fitness",
             "news"
         ],
-        "big_img": "/react4/static/media/6.7fa1bd4ff37ef96e392e.jpg",
+        "big_img": workout_big_image6,
         "categories": [
-            {
-                "name": "Workout",
-                "url": "workout",
-                "id": "workout"
-            },
-            {
-                "name": "Fitness",
-                "url": "fitness",
-                "id": "fitness"
-            }
+            "workout",
+            "fitness"
         ],
-        "image": "/react4/static/media/6.866f8d149680a03a8fe4.jpg",
-        "category_id": {
-            "name": "Workout",
-            "url": "workout",
-            "id": "workout"
-        },
+        "image": workout_image6,
+        "category_id": "workout",
         "url": "the-best-outer-thigh-exercises-and-cardio-workouts-for-your-fitness",
         "author": "krishna",
-        "date": "June 18, 2022"
+        "date": 1655566963878
     },
     {
-        "date": "June 18, 2022",
-        "category_id": {
-            "name": "Workout",
-            "url": "workout",
-            "id": "workout"
-        },
+        "date": 1655567011169,
+        "category_id": "workout",
         "url": "an-open-letter-to-runners-who-think-theyre-too-slow-this-summer",
         "title": "An Open Letter to Runners Who Think They’re “Too Slow” This Summer",
         "categories": [
-            {
-                "name": "Workout",
-                "url": "workout",
-                "id": "workout"
-            },
-            {
-                "name": "Fitness",
-                "url": "fitness",
-                "id": "fitness"
-            }
+            "workout",
+            "fitness"
         ],
-        "big_img": "/react4/static/media/5.d6e27d2cabd215813416.jpg",
-        "image": "/react4/static/media/5.35a047fdda0009b3edf9.jpg",
+        "big_img": workout_big_image5,
+        "image": workout_image5,
         "author": "krishna",
         "tags": [
             "fitness",
@@ -872,136 +564,84 @@ const initialPosts = [
     },
     {
         "author": "krishna",
-        "category_id": {
-            "name": "Workout",
-            "url": "workout",
-            "id": "workout"
-        },
-        "image": "/react4/static/media/4.7069d5cee111d5395972.jpg",
+        "category_id": "workout",
+        "image": workout_image4,
         "tags": [
             "fitness",
             "news"
         ],
-        "date": "June 18, 2022",
+        "date": 1655567063148,
         "title": "What Might Happen To Your Body If You Walk 30 Minutes a Day",
         "url": "what-might-happen-to-your-body-if-you-walk-30-minutes-a-day",
-        "big_img": "/react4/static/media/4.fb3143ff356cc37ff918.jpg",
+        "big_img": workout_big_image4,
         "categories": [
-            {
-                "name": "Workout",
-                "url": "workout",
-                "id": "workout"
-            },
-            {
-                "name": "Fitness",
-                "url": "fitness",
-                "id": "fitness"
-            }
+            "workout",
+            "fitness"
         ]
     },
     {
-        "image": "/react4/static/media/4.82cbda2f1a05e2767ebe.jpg",
+        "image": yoga_image4,
         "tags": [
             "news"
         ],
-        "date": "June 18, 2022",
+        "date": 1655567193627,
         "url": "the-10-most-important-yoga-poses-for-beginners-you-should-remember",
-        "category_id": {
-            "name": "Yoga",
-            "url": "yoga",
-            "id": "yoga"
-        },
+        "category_id": "yoga",
         "author": "krishna",
         "categories": [
-            {
-                "name": "Yoga",
-                "url": "yoga",
-                "id": "yoga"
-            }
+            "yoga"
         ],
         "title": "The 10 Most Important Yoga Poses for Beginners You Should Remember",
-        "big_img": "/react4/static/media/4.56b649363ab911498bba.jpg"
+        "big_img": yoga_big_image4
     },
     {
-        "date": "June 18, 2022",
-        "big_img": "/react4/static/media/4.164656388675ff3c4e7c.jpg",
+        "date": 1655567256769,
+        "big_img": lifestyle_big_image4,
         "author": "krishna",
         "title": "Westin Guests Can Soon Take Spin Classes from Their Hotel Rooms",
         "tags": [
             "news"
         ],
         "categories": [
-            {
-                "name": "Lifestyle",
-                "url": "lifestyle",
-                "id": "lifestyle"
-            }
+            "lifestyle"
         ],
         "url": "westin-guests-can-soon-take-spin-classes-from-their-hotel-rooms",
-        "image": "/react4/static/media/4.ac4ee0c012d83e1425cf.jpg",
-        "category_id": {
-            "name": "Lifestyle",
-            "url": "lifestyle",
-            "id": "lifestyle"
-        }
+        "image": lifestyle_image4,
+        "category_id": "lifestyle"
     },
     {
         "categories": [
-            {
-                "name": "Muscle Building",
-                "url": "muscle-building",
-                "id": "muscle_building"
-            },
-            {
-                "name": "Fitness",
-                "url": "fitness",
-                "id": "fitness"
-            }
+            "muscle_building",
+            "fitness"
         ],
-        "image": "/react4/static/media/4.57586d8491d00100cfc8.jpg",
-        "big_img": "/react4/static/media/4.cffba638287995b4a283.jpg",
+        "image": muscle_building_image4,
+        "big_img": muscle_building_big_image4,
         "author": "krishna",
-        "date": "June 18, 2022",
+        "date": 1655567325363,
         "title": "Muscle Building Workouts: 250+ Free Build Muscle Plans For You",
         "tags": [
             "fitness",
             "news"
         ],
-        "category_id": {
-            "name": "Muscle Building",
-            "url": "muscle-building",
-            "id": "muscle_building"
-        },
+        "category_id": "muscle_building",
         "url": "muscle-building-workouts-250-free-build-muscle-plans-for-you"
     },
     {
-        "category_id": {
-            "name": "Weight Loss",
-            "url": "weight-loss",
-            "id": "weight_loss"
-        },
+        "category_id": "weight_loss",
         "url": "confirmed-2-glasses-of-wine-before-bed-helps-you-lose-weight",
         "categories": [
-            {
-                "name": "Weight Loss",
-                "url": "weight-loss",
-                "id": "weight_loss"
-            },
-            {
-                "name": "Fitness",
-                "url": "fitness",
-                "id": "fitness"
-            }
+            "weight_loss",
+            "fitness"
         ],
-        "image": "/react4/static/media/3.93dee254797ed06b2499.jpg",
+        "image": weight_loss_image3,
         "title": "Confirmed: 2 Glasses of Wine Before Bed Helps You Lose Weight",
         "tags": [
             "fitness",
             "news"
         ],
-        "date": "June 18, 2022",
+        "date": 1655567391887,
         "author": "krishna",
-        "big_img": "/react4/static/media/3.941cfacf8cb07f4794ec.jpg"
+        "big_img": weight_loss_big_image3
     },
     {
         "author": "krishna",
@@ -1011,217 +651,129 @@ const initialPosts = [
         ],
         "url": "8-at-home-back-exercises-for-a-stronger-upper-body-you-need-to-do",
         "categories": [
-            {
-                "name": "Workout",
-                "url": "workout",
-                "id": "workout"
-            },
-            {
-                "name": "Fitness",
-                "url": "fitness",
-                "id": "fitness"
-            }
+            "workout",
+            "fitness"
         ],
         "title": "8 At-Home Back Exercises for a Stronger Upper Body You Need To Do",
-        "date": "June 18, 2022",
-        "image": "/react4/static/media/3.270019c0913e25b7ac50.jpg",
-        "big_img": "/react4/static/media/3.ef30b01209e19bb3d8ea.jpg",
-        "category_id": {
-            "name": "Workout",
-            "url": "workout",
-            "id": "workout"
-        }
+        "date": 1655567471886,
+        "image": workout_image3,
+        "big_img": workout_big_image3,
+        "category_id": "workout"
     },
     {
-        "date": "June 18, 2022",
-        "category_id": {
-            "name": "Yoga",
-            "url": "yoga",
-            "id": "yoga"
-        },
-        "big_img": "/react4/static/media/3.e9912a40f1a585d01597.jpg",
+        "date": 1655567635884,
+        "category_id": "yoga",
+        "big_img": yoga_big_image3,
         "tags": [
             "news"
         ],
         "categories": [
-            {
-                "name": "Yoga",
-                "url": "yoga",
-                "id": "yoga"
-            }
+            "yoga"
         ],
         "title": "12 Must-Know Yoga Poses for Beginners For You To Practice At Home",
-        "image": "/react4/static/media/3.7b1fed625fa8b4e66848.jpg",
+        "image": yoga_image3,
         "url": "12-must-know-yoga-poses-for-beginners-for-you-to-practice-at-home",
         "author": "krishna"
     },
     {
-        "category_id": {
-            "name": "Lifestyle",
-            "url": "lifestyle",
-            "id": "lifestyle"
-        },
+        "category_id": "lifestyle",
         "url": "what-really-helps-get-rid-of-cellulite-you-should-now-about-right-now",
         "author": "krishna",
         "title": "What Really Helps Get Rid of Cellulite You Should Now About Right Now",
-        "image": "/react4/static/media/3.6314bfe637b7373e6ddf.jpg",
-        "date": "June 18, 2022",
-        "big_img": "/react4/static/media/3.49d379c6562789ae688f.jpg",
+        "image": lifestyle_image3,
+        "date": 1655567723882,
+        "big_img": lifestyle_big_image3,
         "tags": [
             "news"
         ],
         "categories": [
-            {
-                "name": "Lifestyle",
-                "url": "lifestyle",
-                "id": "lifestyle"
-            }
+            "lifestyle"
         ]
     },
     {
         "title": "20 Ways to Bust Out of Your Workout Rut With These Simple Routines",
         "categories": [
-            {
-                "name": "Featured",
-                "url": "featured",
-                "id": "featured"
-            },
-            {
-                "name": "Workout",
-                "url": "workout",
-                "id": "workout"
-            },
-            {
-                "name": "Fitness",
-                "url": "fitness",
-                "id": "fitness"
-            }
+            "featured",
+            "workout",
+            "fitness"
         ],
-        "image": "/react4/static/media/7.c1b6e861f9446cf91be6.jpg",
+        "image": workout_image7,
         "tags": [
             "fitness",
             "news"
         ],
-        "big_img": "/react4/static/media/7.048b5322f08c6c6ee4ef.jpg",
+        "big_img": workout_big_image7,
         "url": "20-ways-to-bust-out-of-your-workout-rut-with-these-simple-routines",
         "author": "krishna",
-        "category_id": {
-            "name": "Workout",
-            "url": "workout",
-            "id": "workout"
-        },
-        "date": "June 18, 2022"
+        "category_id": "workout",
+        "date": 1655567813874
     },
     {
-        "date": "June 18, 2022",
+        "date": 1655567892807,
         "title": "This Fitness Blogger Proves Weight Is Just a Meaningless Number",
-        "big_img": "/react4/static/media/2.03b73f10a57fec37ea45.jpg",
+        "big_img": weight_loss_big_image2,
         "url": "this-fitness-blogger-proves-weight-is-just-a-meaningless-number",
         "categories": [
-            {
-                "name": "Weight Loss",
-                "url": "weight-loss",
-                "id": "weight_loss"
-            },
-            {
-                "name": "Fitness",
-                "url": "fitness",
-                "id": "fitness"
-            }
+            "weight_loss",
+            "fitness"
         ],
         "author": "krishna",
-        "category_id": {
-            "name": "Weight Loss",
-            "url": "weight-loss",
-            "id": "weight_loss"
-        },
-        "image": "/react4/static/media/2.0a8ac33227ceeb76b01a.jpg",
+        "category_id": "weight_loss",
+        "image": weight_loss_image2,
         "tags": [
             "fitness",
             "news"
         ]
     },
     {
-        "category_id": {
-            "name": "Workout",
-            "url": "workout",
-            "id": "workout"
-        },
+        "category_id": "workout",
         "title": "The 10-Minute Workout to Help You Feel Better In Your Jeans Right Away",
         "categories": [
-            {
-                "name": "Workout",
-                "url": "workout",
-                "id": "workout"
-            },
-            {
-                "name": "Fitness",
-                "url": "fitness",
-                "id": "fitness"
-            }
+            "workout",
+            "fitness"
         ],
         "author": "krishna",
-        "big_img": "/react4/static/media/2.73d30254c13c0df9ae8d.jpg",
-        "image": "/react4/static/media/2.07c1a3aafb3683bf1c5f.jpg",
+        "big_img": workout_big_image2,
+        "image": workout_image2,
         "tags": [
             "fitness",
             "news"
         ],
         "url": "the-10-minute-workout-to-help-you-feel-better-in-your-jeans-right-away",
-        "date": "June 18, 2022"
+        "date": 1655568021182
     },
     {
         "title": "Yoga Health Benefits: Flexibility, Strength, Posture, and More For Your Body",
-        "big_img": "/react4/static/media/2.f1bd20f77a5e7f63dbf9.jpg",
+        "big_img": yoga_big_image2,
         "author": "krishna",
         "url": "yoga-health-benefits-flexibility-strength-posture-and-more-for-your-body",
         "tags": [
             "news"
         ],
-        "date": "June 18, 2022",
+        "date": 1655568092882,
         "categories": [
-            {
-                "name": "Yoga",
-                "url": "yoga",
-                "id": "yoga"
-            }
+            "yoga"
         ],
-        "image": "/react4/static/media/2.7a80ca821b5fc0a340a5.jpg",
-        "category_id": {
-            "name": "Yoga",
-            "url": "yoga",
-            "id": "yoga"
-        }
+        "image": yoga_image2,
+        "category_id": "yoga"
     },
     {
         "categories": [
-            {
-                "name": "Lifestyle",
-                "url": "lifestyle",
-                "id": "lifestyle"
-            }
+            "lifestyle"
         ],
-        "date": "June 18, 2022",
+        "date": 1655568185893,
         "tags": [
             "news"
         ],
         "url": "7-mind-tricks-for-self-motivation-to-improve-your-life-for-the-better",
-        "category_id": {
-            "name": "Lifestyle",
-            "url": "lifestyle",
-            "id": "lifestyle"
-        },
-        "image": "/react4/static/media/2.5ae03d3d1112c4573d65.jpg",
-        "big_img": "/react4/static/media/2.7eb5a931f0476adaef55.jpg",
+        "category_id": "lifestyle",
+        "image": lifestyle_image2,
+        "big_img": lifestyle_big_image2,
         "author": "krishna",
         "title": "7 Mind Tricks for Self-Motivation To Improve Your Life For The Better"
     },
     {
-        "category_id": {
-            "name": "Muscle Building",
-            "url": "muscle-building",
-            "id": "muscle_building"
-        },
+        "category_id": "muscle_building",
         "url": "the-science-of-how-to-build-muscle-full-guide-for-you-start-right-now",
         "tags": [
             "fitness",
@@ -1229,45 +781,25 @@ const initialPosts = [
         ],
         "title": "The Science of How to Build Muscle: Full Guide For You Start Right Now",
         "author": "krishna",
-        "image": "/react4/static/media/2.087d9e3dd39c5151cd4b.jpg",
-        "big_img": "/react4/static/media/2.5988d1c769ce7d52b857.jpg",
+        "image": muscle_building_image2,
+        "big_img": muscle_building_big_image2,
         "categories": [
-            {
-                "name": "Muscle Building",
-                "url": "muscle-building",
-                "id": "muscle_building"
-            },
-            {
-                "name": "Fitness",
-                "url": "fitness",
-                "id": "fitness"
-            }
+            "muscle_building",
+            "fitness"
         ],
-        "date": "June 18, 2022"
+        "date": 1655568265873
     },
     {
-        "category_id": {
-            "name": "Weight Loss",
-            "url": "weight-loss",
-            "id": "weight_loss"
-        },
-        "date": "June 18, 2022",
-        "image": "/react4/static/media/1.9b649c154f8c389c7011.jpg",
-        "big_img": "/react4/static/media/1.74bcf50a8670aa5ad907.jpg",
+        "category_id": "weight_loss",
+        "date": 1655568361891,
+        "image": weight_loss_image1,
+        "big_img": weight_loss_big_image1,
         "author": "krishna",
         "title": "‘Everything In Moderation’ May Lead to Weight Gain According To New Report",
         "url": "everything-in-moderation-may-lead-to-weight-gain-according-to-new-report",
         "categories": [
-            {
-                "name": "Weight Loss",
-                "url": "weight-loss",
-                "id": "weight_loss"
-            },
-            {
-                "name": "Fitness",
-                "url": "fitness",
-                "id": "fitness"
-            }
+            "weight_loss",
+            "fitness"
         ],
         "tags": [
             "fitness",
@@ -1276,77 +808,49 @@ const initialPosts = [
     },
     {
         "title": "The Ultimate 40-Day Plan to Crush Any Goal, Featuring Jen Widerstrom",
-        "image": "/react4/static/media/1.de910b028de8c6fad3ee.jpg",
-        "category_id": {
-            "name": "Workout",
-            "url": "workout",
-            "id": "workout"
-        },
-        "date": "June 18, 2022",
+        "image": workout_image1,
+        "category_id": "workout",
+        "date": 1655568445627,
         "author": "krishna",
         "tags": [
             "fitness",
             "news"
         ],
-        "big_img": "/react4/static/media/1.197941d4f61df6301157.jpg",
+        "big_img": workout_big_image1,
         "url": "the-ultimate-40-day-plan-to-crush-any-goal-featuring-jen-widerstrom",
         "categories": [
-            {
-                "name": "Workout",
-                "url": "workout",
-                "id": "workout"
-            },
-            {
-                "name": "Fitness",
-                "url": "fitness",
-                "id": "fitness"
-            }
+            "workout",
+            "fitness"
         ]
     },
     {
         "author": "krishna",
         "url": "yoga-for-complete-beginners-20-minute-home-yoga-easy-workout",
-        "category_id": {
-            "name": "Yoga",
-            "url": "yoga",
-            "id": "yoga"
-        },
+        "category_id": "yoga",
         "categories": [
-            {
-                "name": "Yoga",
-                "url": "yoga",
-                "id": "yoga"
-            }
+            "yoga"
         ],
-        "image": "/react4/static/media/1.92a0aa78dd6e50414cb4.jpg",
-        "big_img": "/react4/static/media/1.942a53c49b4c63ae076f.jpg",
+        "image": yoga_image1,
+        "big_img": yoga_big_image1,
         "title": "Yoga For Complete Beginners – 20 Minute Home Yoga Easy Workout!",
         "tags": [
             "news"
         ],
-        "date": "June 18, 2022"
+        "date": 1655568510033
     },
     {
-        "category_id": {
-            "name": "Lifestyle",
-            "url": "lifestyle",
-            "id": "lifestyle"
-        },
+        "category_id": "lifestyle",
         "categories": [
-            {
-                "name": "Lifestyle",
-                "url": "lifestyle",
-                "id": "lifestyle"
-            }
+            "lifestyle"
         ],
-        "big_img": "/react4/static/media/1.69590cf4e39cc63f1f8c.jpg",
+        "big_img": lifestyle_big_image1,
         "author": "krishna",
-        "date": "June 18, 2022",
+        "date": 1655568591877,
         "tags": [
             "news"
         ],
         "url": "10-simple-rules-for-a-healthy-life-a-happier-life-for-you-to-enjoy",
-        "image": "/react4/static/media/1.bc8474ee62a5d5ac067d.jpg",
+        "image": lifestyle_image1,
         "title": "10 Simple Rules for a Healthy Life – a Happier Life For You To Enjoy"
     },
     {
@@ -1355,37 +859,34 @@ const initialPosts = [
             "news"
         ],
         "categories": [
-            {
-                "name": "Muscle Building",
-                "url": "muscle-building",
-                "id": "muscle_building"
-            },
-            {
-                "name": "Fitness",
-                "url": "fitness",
-                "id": "fitness"
-            }
+            "muscle_building",
+            "fitness"
         ],
-        "big_img": "/react4/static/media/1.bb0c86b428ac100c3cbc.jpg",
+        "big_img": muscle_building_big_image1,
         "title": "How to Build Your Muscle Fast Following The Best Specific Strategy",
         "url": "how-to-build-your-muscle-fast-following-the-best-specific-strategy",
-        "date": "June 18, 2022",
-        "image": "/react4/static/media/1.3c790bb30a28fcaecded.jpg",
-        "category_id": {
-            "name": "Muscle Building",
-            "url": "muscle-building",
-            "id": "muscle_building"
-        },
+        "date": 1655568712882,
+        "image": muscle_building_image1,
+        "category_id": "muscle_building",
         "author": "krishna"
     }
 ]
 
 const allPosts = [];
-initialPosts.concat().reverse().forEach((element)=>{
-    element.url = "/"+element.url;
-    element.category_id.url = "/category/"+element.category_id.url;
-    element.categories.forEach((element)=>{
-        element.url = "/category/"+element.url;
+initialPosts.concat().reverse().forEach((element) => {
+    let arr = []
+    element.categories.forEach((element) => {
+        arr.push(rtnCategory(element))
+    });
+    element.categories = arr;
+    element.category_id = rtnCategory(element.category_id);
+    element.date = dt(element.date)
+
+    // Impelementing /category/ before category url
+    element.url = "/" + element.url;
+    element.category_id.url = "/category/" + element.category_id.url;
+    element.categories.forEach((element) => {
+        element.url = "/category/" + element.url;
     });
     allPosts.push(element);
 });

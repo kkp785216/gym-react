@@ -7,7 +7,6 @@ import 'swiper/css/pagination';
 import { Link } from 'react-router-dom';
 
 const RelatedPosts = ({ data }) => {
-    console.log(data)
     const handleTitle = (title) => {
         let str;
         let arr = title.split(" ");
@@ -26,8 +25,8 @@ const RelatedPosts = ({ data }) => {
     }
     return (
         <div className="related-post-wrapper">
-            <h3 className='pb-3'>Related Posts</h3>
-            <div className="related-posts pt-3">
+            <h3 className='pb-2'>Related Posts</h3>
+            <div className="related-posts pt-2">
                 <Swiper
                     modules={[Pagination]}
                     spaceBetween={16}
@@ -35,7 +34,7 @@ const RelatedPosts = ({ data }) => {
                     pagination={{ clickable: true }}
                     loop={true}
                 >
-                    {data && data.map((element, index) => {
+                    {data && data.length >= 1 && data.map((element, index) => {
                         return (
                             <SwiperSlide key={index}>
                                 <div className='related-posts-child'>

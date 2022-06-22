@@ -16,6 +16,8 @@ import PostShare from './PostShare/PostShare'
 import {Link} from 'react-router-dom'
 import Comment from './Comment/Comment'
 import RelatedPosts from './RelatedPosts/RelatedPosts'
+import LeaveComment from './LeaveComment/LeaveComment'
+import { categories } from '../../../Database/Categories'
 
 const Posts = () => {
 
@@ -91,6 +93,12 @@ const Posts = () => {
 
                 <div className='py-3'>
                   <RelatedPosts data={allPosts.filter((element, index) => (element.category_id.id === currentPost[0].category_id.id) && (index !== allPosts.findIndex(element=>element.title === currentPost[0].title)))}/>
+                </div>
+
+                <hr className='p-0 m-0 my-3' style={{color:'#dfdfdf', opacity:'1'}}/>
+
+                <div className='py-3'>
+                  <LeaveComment/>
                 </div>
               </>
             }

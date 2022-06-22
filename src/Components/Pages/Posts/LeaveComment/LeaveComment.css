@@ -1,0 +1,44 @@
+.leave-comment-wrapper>h3{
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0.7px;
+}
+
+
+.leave-comment-form> .row input[type=name],
+.leave-comment-form> .row input[type=email],
+.leave-comment-form> .row textarea,
+.leave-comment-form> .row input[type=text]
+{
+    width: 100%;
+    padding: 8px 17px;
+    font-size: 14px;
+    outline: none;
+    border: 1px solid #dfdfdf;
+}
+
+.leave-comment-form input[type=checkbox]{
+    margin-right: 5px;
+}
+.leave-comment-form span{
+    font-size: 15px;
+    color: rgb(87, 87, 87);
+}
+
+.leave-comment-form button{
+    margin: auto;
+    display: block;
+    border: none;
+    padding: 11px 33px;
+    font-size: 12.5px;
+    letter-spacing: 0.4px;
+    color: rgb(46, 46, 46);
+    font-weight: 700;
+    transition: .3s ease;
+}
+.leave-comment-form button:hover{
+    background-color: var(--primary-color);
+    color: white;
+}
