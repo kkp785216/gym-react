@@ -1,0 +1,10 @@
+.posts .tags> a{
+    padding: 6px 13px;
+    border: 1px solid #dfdfdf;
+    margin-right: 9px;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+.posts .tags> a:last-child{
+    margin-right: 0;
+}

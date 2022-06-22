@@ -1,0 +1,44 @@
+.related-post-wrapper{
+    
+}
+.related-post-wrapper>h3{
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+}
+.related-posts{
+
+}
+.related-posts-child{
+    
+}
+.related-posts-child h3{
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+    margin: 16px 0;
+}
+.related-posts-child> h3>a{
+    color: #2a2a2a;
+}
+.related-posts-child> span{
+    text-align: center;
+    display: block;
+    font-size: 14px;
+}
+.related-posts .swiper-pagination{
+    position: static;
+    margin-top: 9px;
+}
+.related-posts .swiper-pagination .swiper-pagination-bullet{
+    background-color: transparent;
+    border: 1px solid grey;
+    width: 10px;
+    height: 10px;
+    transition: .3s ease;
+}
+.related-posts .swiper-pagination .swiper-pagination-bullet-active{
+    background-color: var(--primary-color) !important;
+    border: 1px solid var(--primary-color);
+}

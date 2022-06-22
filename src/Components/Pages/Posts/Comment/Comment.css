@@ -1,0 +1,28 @@
+.comment-wrapper>.row{
+    margin: 0 -8px;
+}
+.comment-wrapper>.row>.col{
+    padding: 0 8px;
+}
+.comment-wrapper>.row>.col>.c-profile{
+    border-radius: 100%;
+    overflow: hidden;
+}
+.comment-wrapper>.row>.col> .c-content>h3{
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.comment-wrapper>.row>.col> .c-content>p{
+    font-size: 14.5px;
+    line-height: 26px;
+}
+.comment-wrapper>.row>.col> .c-content>div>*{
+    margin-right: 9px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+.comment-wrapper>.row>.col> .c-content>div>*:hover{
+    color: var(--primary-color);
+}

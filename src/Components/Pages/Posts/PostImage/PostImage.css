@@ -1,0 +1,34 @@
+.post-image-wrapper {
+    padding: 45px 9px;
+}
+
+.post-image {
+    position: relative;
+}
+
+.post-image img {
+    cursor: pointer;
+}
+
+.post-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(transparent, transparent, transparent, #0000006e, #000000cf);
+}
+
+.post-image>.post-image-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+}
+
+.post-image>.post-image-content>span>a,
+.post-image>.post-image-content>* {
+    color: white;
+}

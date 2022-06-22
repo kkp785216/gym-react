@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from './Components/Home/Home';
 import Posts from './Components/Pages/Posts/Posts';
 import Search from './Components/Pages/Search/Search';
+import Category from './Components/Pages/Category/Category'
 
 function App() {
   const basename = "/react4/"
@@ -14,6 +15,7 @@ function App() {
         <Route exact path={`/page/:page`} element={<Home basename={basename}/>} />
         <Route exact path='/:postId' element={<Posts />} />
         <Route exact path='/search' element={<Search />} />
+        <Route exact path='/category/:categoryId' element={<Category />} />
         <Route path='/*' element={<div>Page Not Found</div>}/>
       </Routes>
     </Router>

@@ -1,8 +1,12 @@
 import React from 'react'
+import Header from '../../Header/Header'
 
 const Search = () => {
   return (
-    <div>This is search page</div>
+    <>
+      <Header />
+      <div>This is search page</div>
+    </>
   )
 }
 

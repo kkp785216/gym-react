@@ -31,6 +31,7 @@ const Home = (props) => {
   const handlePageClick = ({ selected }) => {
     if (selected + 1 >= 1 && selected + 1 <= totalPage) {
       navigate(`/page/${selected + 1}`);
+      document.querySelector('.blog-post-wrapper').scrollIntoView();
     }
   }
 
@@ -40,7 +41,7 @@ const Home = (props) => {
 
       <Slider />
 
-      <MainiLayout className="hello">
+      <MainiLayout>
 
         <ColumnLayout>
           <div>
@@ -122,7 +123,6 @@ const Home = (props) => {
           })}
         </BlogPostRow>
         <Pagination pageCount={totalPage} handlePageClick={handlePageClick} page={page} />
-
       </div>
     </>
   )

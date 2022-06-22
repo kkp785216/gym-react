@@ -10,19 +10,21 @@ import { MdEmail } from 'react-icons/md'
 const Header = () => {
   const search = useRef();
   const handleSearch = () => {
-    search.current.classList.toggle('on');
+    try { search.current.classList.toggle('on') } catch { }
   }
 
   useEffect(() => {
     window.onscroll = () => {
-      if (window.scrollY === 0) {
-        document.querySelector('header').classList.add('on');
-        document.querySelector('nav').classList.add('on');
-      }
-      else {
-        document.querySelector('header').classList.remove('on');
-        document.querySelector('nav').classList.remove('on');
-      }
+      try {
+        if (window.scrollY === 0) {
+          document.querySelector('header').classList.add('on');
+          document.querySelector('nav').classList.add('on');
+        }
+        else {
+          document.querySelector('header').classList.remove('on');
+          document.querySelector('nav').classList.remove('on');
+        }
+      } catch { }
     }
   }, [])
 

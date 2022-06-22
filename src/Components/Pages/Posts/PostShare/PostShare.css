@@ -1,0 +1,63 @@
+.post-share{
+    display: flex;
+    padding: 9px;
+    border: 1px solid #dfdfdf;
+}
+
+.post-share>span{
+    padding: 0 21px 0 12px;
+    font-size: 15px;
+    margin: auto 0;
+    font-weight: 600;
+}
+
+.post-share>.post-share-btn{
+    padding: 4px 10px;
+    margin: 0 4.5px;
+    display: flex;
+    align-items: center;
+    border-radius: 2px;
+    color: white;
+    cursor: pointer;
+}
+.post-share>.post-share-like>span{
+    margin-right: 5px;
+    font-weight: 500;
+}
+.post-share>.post-share-hover{
+   position: relative;
+}
+.post-share>.post-share-hover>div{
+    position: absolute;
+    top: 54px;
+    left: -12px;
+    right: -12px;
+    text-align: center;
+    display: block;
+    background-color: black;
+    color: white;
+    font-size: 8px;
+    z-index: 0;
+    padding: 3px;
+    transition: .27s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+.post-share>.post-share-hover:hover> div{
+    top: 42px;
+    opacity: 1;
+    visibility: visible;
+}
+.post-share>.post-share-hover>div>div:before{
+    width: 9px;
+    height: 9px;
+    content: "";
+    top: -7.3px;
+    background: black;
+    transform: rotate(45deg);
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: -1;
+}
