@@ -20,6 +20,7 @@ import CategoryLayout from '../../Layouts/CategoryLayout/CategoryLayout'
 import PostLayout5 from '../../Layouts/PostsLayouts/PostLayout5/PostLayout5'
 import SubscribeNewsLater from '../../Layouts/SubscribeNewsLater/SubscribeNewsLater'
 import SearchLayout from '../../Layouts/SearchLayout/SearchLayout'
+import Footer from '../../Footer/Footer'
 
 const Posts = () => {
 
@@ -66,7 +67,7 @@ const Posts = () => {
             {/* Description Content */}
             {currentPost.length === 1 &&
               <>
-                <div>
+                <div className='pb-4'>
                   <p>Lommodo ligula eget dolor. Aenean massa. Cum sociis que penatibus et magnis dis parturient montes lorem, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla onsequat massa quis enim. Donec pede justo fringilla vel aliquet nec vulputate eget. Lorem ispum dolore siamet ipsum dolor.</p>
                   <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumquer nihil impedit quo minus id quod maxime placeat facere.<br />
                     <span id="more-87" /></p>
@@ -79,7 +80,7 @@ const Posts = () => {
                   <p>Rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer cidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</p>
                 </div>
 
-                <div className="tags py-4">
+                <div className="tags pt-1 pb-4">
                   {currentPost[0].tags.map((element, index) => {
                     return <Link key={index} to={"/tag/" + element}>{element.replace(element[0], element[0].toUpperCase())}</Link>
                   })}
@@ -134,6 +135,10 @@ const Posts = () => {
           </ColumnLayout>
 
         </MainiLayout>
+        
+        <hr className='m-0 p-0' style={{ color: 'var(--border-color)', opacity: '1' }} />
+
+        <Footer/>
       </> :
         <>
           <Error />

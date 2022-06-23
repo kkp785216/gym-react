@@ -1,0 +1,10 @@
+.footer-heading{
+    padding-bottom: 21px;
+}
+.footer-heading> h3{
+    font-size: 13px;
+    text-transform: uppercase;
+    border-bottom: 3px solid var(--border-color);
+    padding: 7px 0;
+    letter-spacing: .5px;
+}

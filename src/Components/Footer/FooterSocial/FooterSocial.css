@@ -1,0 +1,34 @@
+.footer-social{
+    background-color: #111111;
+    padding: 33px 0;
+}
+.footer-social a svg{
+    color: white;
+}
+.footer-social a span{
+    color: rgb(181 181 181);
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+}
+.footer-social-single{
+    margin-right:33px;
+}
+.footer-social-single:last-child{
+    margin-right: 0;
+}
+.footer-social-single>a> :first-child{
+    padding: 11px;
+    font-size: 16px;
+    border-radius: 100%;
+    margin-right: 9px;
+}
+.footer-social-single>a> :first-child.footer-insta{
+    background: radial-gradient(circle farthest-corner at 35% 90%,#ffa100,transparent 50%),radial-gradient(circle farthest-corner at 0 140%,#efa11c,transparent 50%),radial-gradient(ellipse farthest-corner at 0 -25%,#5258cf,transparent 50%),radial-gradient(ellipse farthest-corner at 20% -50%,#5258cf,transparent 50%),radial-gradient(ellipse farthest-corner at 100% 0,#893dc2,transparent 50%),radial-gradient(ellipse farthest-corner at 60% -20%,#8f44c7,transparent 50%),radial-gradient(ellipse farthest-corner at 100% 100%,#d43178,transparent),linear-gradient(#6559ca,#bc318f 30%,#e33f5f 50%,#f77638 70%,#fec66d 100%) !important;
+}
+.footer-social-single>a> :first-child>*{
+    display: block;
+}
+.footer-social-single>a> :last-child{
+
+}

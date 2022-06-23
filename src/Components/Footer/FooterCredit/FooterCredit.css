@@ -1,0 +1,13 @@
+.footer-credit{
+    background-color: #111111;
+    color: rgb(181 181 181);
+    padding: 21px 11px;
+    text-align: center;
+    font-size: 14px;
+}
+.footer-credit a{
+    color: #26c6da;
+}
+.footer-credit a:hover{
+    text-decoration: underline;
+}

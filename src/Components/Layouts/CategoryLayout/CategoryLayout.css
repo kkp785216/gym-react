@@ -29,6 +29,9 @@
     justify-content: space-between;
     transition: .3s ease;
 }
+.category-layout ul li a span{
+    font-style: italic;
+}
 .category-layout ul li a:hover{
     color: var(--primary-color);
 }

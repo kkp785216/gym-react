@@ -18,6 +18,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import CategoryLayout from '../Layouts/CategoryLayout/CategoryLayout'
 import PostLayout4 from '../Layouts/PostsLayouts/PostLayout4/PostLayout4'
 import SubscribeNewsLater from '../Layouts/SubscribeNewsLater/SubscribeNewsLater'
+import Footer from '../Footer/Footer'
 
 const Home = (props) => {
 
@@ -130,6 +131,10 @@ const Home = (props) => {
         </BlogPostRow>
         <Pagination pageCount={totalPage} handlePageClick={handlePageClick} page={page} />
       </div>
+
+      <hr className='m-0 p-0' style={{ color: 'var(--border-color)', opacity: '1' }} />
+
+      <Footer />
     </>
   )
 }
