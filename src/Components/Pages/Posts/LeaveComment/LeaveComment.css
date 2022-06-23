@@ -16,7 +16,7 @@
     padding: 8px 17px;
     font-size: 14px;
     outline: none;
-    border: 1px solid #dfdfdf;
+    border: 1px solid var(--border-color);
 }
 
 .leave-comment-form input[type=checkbox]{

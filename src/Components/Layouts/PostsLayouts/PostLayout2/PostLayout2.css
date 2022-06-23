@@ -33,3 +33,7 @@
 .pagelayout2>.row>.col>.row>.col span{
     font-size: 13px;
 }
+.pagelayout2 hr{
+    opacity: 1;
+    color: var(--border-color);
+}

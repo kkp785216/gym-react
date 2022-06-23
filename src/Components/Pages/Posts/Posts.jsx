@@ -9,15 +9,17 @@ import SocialConnect from '../../Layouts/SocialConnect/SocialConnect'
 import { weight_loss } from '../../../Database/SortedPosts'
 import PostLayout2 from '../../Layouts/PostsLayouts/PostLayout2/PostLayout2'
 import PostImage from './PostImage/PostImage'
-import { useParams } from 'react-router-dom';
-import { allPosts } from '../../../Database/SortedPosts';
+import { useParams, Link } from 'react-router-dom';
+import { allPosts, featured } from '../../../Database/SortedPosts';
 import Error from '../Error/Error'
 import PostShare from './PostShare/PostShare'
-import {Link} from 'react-router-dom'
 import Comment from './Comment/Comment'
 import RelatedPosts from './RelatedPosts/RelatedPosts'
 import LeaveComment from './LeaveComment/LeaveComment'
-import { categories } from '../../../Database/Categories'
+import CategoryLayout from '../../Layouts/CategoryLayout/CategoryLayout'
+import PostLayout5 from '../../Layouts/PostsLayouts/PostLayout5/PostLayout5'
+import SubscribeNewsLater from '../../Layouts/SubscribeNewsLater/SubscribeNewsLater'
+import SearchLayout from '../../Layouts/SearchLayout/SearchLayout'
 
 const Posts = () => {
 
@@ -26,7 +28,7 @@ const Posts = () => {
   useEffect(() => {
     window.document.body.scrollIntoView()
   }, [currentPost])
-  
+
 
   return (
     <>
@@ -47,9 +49,9 @@ const Posts = () => {
 
             <div>
               <Heading color="secondary">
-                Featured Posts(Edit)
+                Featured Posts
               </Heading>
-              <PostLayout2 data={weight_loss.slice(0, 8)} date={true} hr={true} />
+              <PostLayout2 data={featured.slice(0, 8)} date={true} hr={true} />
             </div>
 
             <div>
@@ -78,8 +80,8 @@ const Posts = () => {
                 </div>
 
                 <div className="tags py-4">
-                  {currentPost[0].tags.map((element, index)=>{
-                    return <Link key={index} to={"/tag/"+element}>{element.replace(element[0], element[0].toUpperCase())}</Link>
+                  {currentPost[0].tags.map((element, index) => {
+                    return <Link key={index} to={"/tag/" + element}>{element.replace(element[0], element[0].toUpperCase())}</Link>
                   })}
                 </div>
 
@@ -88,17 +90,17 @@ const Posts = () => {
                 </div>
 
                 <div className='py-4'>
-                  <Comment/>
+                  <Comment />
                 </div>
 
                 <div className='py-3'>
-                  <RelatedPosts data={allPosts.filter((element, index) => (element.category_id.id === currentPost[0].category_id.id) && (index !== allPosts.findIndex(element=>element.title === currentPost[0].title)))}/>
+                  <RelatedPosts data={allPosts.filter((element, index) => (element.category_id.id === currentPost[0].category_id.id) && (index !== allPosts.findIndex(element => element.title === currentPost[0].title)))} />
                 </div>
 
-                <hr className='p-0 m-0 my-3' style={{color:'#dfdfdf', opacity:'1'}}/>
+                <hr className='p-0 m-0 my-3' style={{ color: 'var(--border-color)', opacity: '1' }} />
 
                 <div className='py-3'>
-                  <LeaveComment/>
+                  <LeaveComment />
                 </div>
               </>
             }
@@ -106,17 +108,28 @@ const Posts = () => {
 
           <ColumnLayout>
             <div>
-              <Heading color="secondary">
-                Social Contact
-              </Heading>
-              <SocialConnect />
+              <SearchLayout/>
             </div>
 
             <div>
               <Heading color="secondary">
-                Recent Post
+                Recent Posts
               </Heading>
-              <PostLayout2 data={weight_loss.slice(0, 8)} date={true} hr={true} />
+              <PostLayout5 data={allPosts.slice(0, 5)} />
+            </div>
+
+            <div>
+              <Heading color="secondary">
+                SUBSCRIBE NEWSLETTER
+              </Heading>
+              <SubscribeNewsLater />
+            </div>
+
+            <div>
+              <Heading color="secondary">
+                Categories
+              </Heading>
+              <CategoryLayout />
             </div>
           </ColumnLayout>
 

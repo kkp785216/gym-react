@@ -1,0 +1,27 @@
+.subscribe-news-later{
+    
+}
+.subscribe-news-later>span{
+    font-size: 15px;
+    display: block;
+    text-align: center;
+    padding-bottom: 21px;
+}
+.subscribe-news-later-form> input{
+    width: 100%;
+    padding: 8px 17px;
+    font-size: 14px;
+    outline: none;
+    border: 1px solid var(--border-color);
+    margin-bottom: 19px;
+}
+
+.subscribe-news-later-form> button{
+    width: 100%;
+    border: none;
+    background-color: #444444;
+    color: white;
+    padding: 7px;
+    font-size: 14px;
+    font-weight: 700;
+}

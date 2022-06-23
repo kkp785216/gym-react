@@ -17,7 +17,7 @@ const Comment = () => {
                 <div className="col col-10 px-2">
                     <div className="c-content">
                         <h3>Krishna Prajapati</h3>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae. Nemo enim ipsam voluptatem.</p>
+                        <p>This is default comment posted by the developer "Krishna", this is a Kind of blog Project using "React" JavaScript Framework. If you wanna deal with this template then contact me: 8858899958 Thankyou.</p>
                         <div>
                             <RiEarthFill />
                             <FaFacebookF />

@@ -1,0 +1,23 @@
+.search-layout {
+    position: relative;
+}
+
+.search-layout>form>input {
+    width: 100%;
+    padding: 10px 17px;
+    font-size: 14px;
+    outline: none;
+    border: 1px solid var(--border-color);
+    position: relative;
+}
+
+.search-layout>form>svg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 12px;
+    margin: auto;
+    color: #c1c1c1;
+    cursor: text;
+    font-size: 16px;
+}

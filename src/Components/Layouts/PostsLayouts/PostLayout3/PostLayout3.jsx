@@ -7,9 +7,9 @@ const PostLayout3 = (props) => {
   return (
     <div className='pagelayout3'>
         <Link to={data.url}><img src={data.image} alt="" width="100%"/></Link>
-        <span><Link to={data.category_id.url}>{data.category_id.name}</Link></span>
+        <span className='layout3-cat'><Link to={data.category_id.url}>{data.category_id.name}</Link></span>
         <h3><Link to={data.url}>{data.title}</Link></h3>
-        <span>{data.date}</span>
+        <span className='layout3-date'>{data.date}</span>
         <p>Lommodo ligula eget dolor. Aenean massa. Cum sociis que penatibus et magnis dis parturient montes lorem, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque…</p>
     </div>
   )

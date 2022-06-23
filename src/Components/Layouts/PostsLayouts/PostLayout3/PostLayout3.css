@@ -1,3 +1,25 @@
 .pagelayout3{
     
 }
+.pagelayout3> .layout3-cat{
+    display: block;
+    padding-top: 18px;
+    padding-bottom: 11px;
+}
+.pagelayout3> .layout3-cat>a{
+    font-size: 14px;
+    color: var(--primary-color);
+}
+.pagelayout3> h3{
+    font-size: 20px;
+    margin-bottom: 11px;
+}
+.pagelayout3> .layout3-date{
+    font-size: 14px;
+    color: rgb(99, 99, 99);
+}
+.pagelayout3> p{
+    margin-top: 15px;
+    font-size: 15px;
+    line-height: 27px;
+}

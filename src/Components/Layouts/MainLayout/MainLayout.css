@@ -5,6 +5,12 @@
     flex: 0 0 auto;
     width: 25%;
 }
+.column-layout>div>*{
+    padding-bottom: 53px;
+}
+.column-layout>div>*:last-child{
+    padding-bottom: 0;
+}
 
 .column-layout.middle {
     width: 50%;

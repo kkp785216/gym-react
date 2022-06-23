@@ -1,0 +1,18 @@
+.postlayout4.row{
+    margin: -10px;
+}
+.postlayout4>.col{
+    flex: 0 0 auto;
+    padding: 10px;
+}
+.postlayout4>.col h3{
+    font-size: 17px;
+    margin-top: 17px;
+    margin-bottom: 5px;
+}
+.postlayout4>.col span{
+    font-size: 13px;
+}
+.postlayout4>.col>a>img{
+    width: 100%;
+}

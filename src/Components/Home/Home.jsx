@@ -4,7 +4,6 @@ import Slider from '../Slider/Slider'
 import ColumnLayout from '../Layouts/MainLayout/ColumnLayout'
 import Heading from '../Layouts/Heading/Heading'
 import { workout, muscle_building, weight_loss, allPosts } from '../../Database/SortedPosts'
-import { Link } from 'react-router-dom'
 import './Home.css'
 import Home2 from './Home2/Home2'
 import SocialConnect from '../Layouts/SocialConnect/SocialConnect'
@@ -16,13 +15,16 @@ import BlogPostColumn from '../Layouts/BlogPostLayout/BlogPostColumn'
 import PostLayout3 from '../Layouts/PostsLayouts/PostLayout3/PostLayout3'
 import Pagination from './Pagination/Pagination'
 import { useNavigate, useParams } from "react-router-dom";
+import CategoryLayout from '../Layouts/CategoryLayout/CategoryLayout'
+import PostLayout4 from '../Layouts/PostsLayouts/PostLayout4/PostLayout4'
+import SubscribeNewsLater from '../Layouts/SubscribeNewsLater/SubscribeNewsLater'
 
 const Home = (props) => {
 
   let navigate = useNavigate();
   let { page } = useParams();
-  (window.location.pathname === (props.basename !==undefined ? props.basename.replace(/\//g,'').replace(/^/,'/') : "/")) && (page = 1);
-  (window.location.pathname === (props.basename !==undefined ? props.basename.replace(/\//g,'').replace(/^/,'/').replace(/$/,'/') : "/")) && (page = 1);
+  (window.location.pathname === (props.basename !== undefined ? props.basename.replace(/\//g, '').replace(/^/, '/') : "/")) && (page = 1);
+  (window.location.pathname === (props.basename !== undefined ? props.basename.replace(/\//g, '').replace(/^/, '/').replace(/$/, '/') : "/")) && (page = 1);
 
   // define pagination rules
   let perPagePost = 12;
@@ -50,6 +52,13 @@ const Home = (props) => {
             </Heading>
             <FacebookFeed />
           </div>
+
+          <div>
+            <Heading color="secondary">
+              SUBSCRIBE NEWSLETTER
+            </Heading>
+            <SubscribeNewsLater />
+          </div>
         </ColumnLayout>
 
         <ColumnLayout className="middle">
@@ -59,17 +68,7 @@ const Home = (props) => {
             <Heading color="primary">
               Workout
             </Heading>
-            <div className="row home1">
-              {workout.slice(0, 9).map((element, index) => {
-                return (
-                  <div className="col col-4" key={index}>
-                    <Link to={element.url}><img src={element.image} alt="" /></Link>
-                    <h3><Link to={element.url}>{element.title}</Link></h3>
-                    <span>{element.date}</span>
-                  </div>
-                )
-              })}
-            </div>
+            <PostLayout4 data={workout.slice(0, 9)} />
           </div>
 
           {/* Home - 2 */}
@@ -83,7 +82,7 @@ const Home = (props) => {
           {/* Home - 3 */}
           <div>
             <Heading color="primary">
-              {weight_loss.category}
+              Weight Loss
             </Heading>
             <PostLayout1 data={weight_loss.slice(0, 8)} className="home3" date={false} />
           </div>
@@ -103,6 +102,13 @@ const Home = (props) => {
               Recent Post
             </Heading>
             <PostLayout2 data={allPosts.slice(0, 8)} date={true} hr={true} />
+          </div>
+
+          <div>
+            <Heading color="secondary">
+              Categories
+            </Heading>
+            <CategoryLayout />
           </div>
         </ColumnLayout>
 
