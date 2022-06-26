@@ -25,7 +25,7 @@ const Slider = () => {
                 slidesPerView={1}
                 loop={true}
                 navigation
-                autoplay={{ delay: 5000, disableOnInteraction: false, pauseOnMouseEnter: true }}
+            // autoplay={{ delay: 5000, disableOnInteraction: false, pauseOnMouseEnter: true }}
             >
                 {newData.map((element, index) => {
                     return (
@@ -36,12 +36,14 @@ const Slider = () => {
                                         return (
                                             <div className="col" key={index}>
                                                 <div className="slider_img_box position-relative">
-                                                    <Link to={element.url}><img src={element.image} alt="" /></Link>
-                                                    <div className="slider-content position-absolute start-0 end-0 bottom-0">
-                                                        <h3><Link to={element.url}>{element.title}</Link></h3>
-                                                        <div className='slider-date text-center'>
-                                                            <span>{element.date} - </span>
-                                                            <span> 0 comment</span>
+                                                    <div className="position-absolute top-0 bottom-0 start-0 end-0">
+                                                        <Link to={element.url}><img src={element.image} alt="" /></Link>
+                                                        <div className="slider-content position-absolute start-0 end-0 bottom-0">
+                                                            <h3><Link to={element.url}>{element.title}</Link></h3>
+                                                            <div className='slider-date text-center'>
+                                                                <span>{element.date} - </span>
+                                                                <span> 0 comment</span>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>

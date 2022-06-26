@@ -19,7 +19,7 @@
 
 .slider-wrapper>.row>.col:nth-child(1) .slider_img_box,
 .slider-wrapper>.row>.col:nth-child(2) .slider_img_box {
-    aspect-ratio: 1170/700;
+    padding-bottom: 59.8290%;
     overflow: hidden;
 }
 
@@ -54,10 +54,10 @@
 .slider-wrapper>.row>.col .slider_img_box {
     width: 100%;
     position: relative;
-    aspect-ratio: 1170/780;
+    padding-bottom: 66.66666667%;
 }
 
-.slider-wrapper>.row>.col>.slider_img_box>a::before {
+.slider-wrapper>.row>.col>.slider_img_box>div>a::before {
     content: '';
     position: absolute;
     width: 100%;
