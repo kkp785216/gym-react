@@ -2,6 +2,7 @@
     display: flex;
     padding: 9px;
     border: 1px solid #dfdfdf;
+    flex-wrap: wrap;
 }
 
 .post-share>span{
@@ -13,8 +14,9 @@
 
 .post-share>.post-share-btn{
     padding: 4px 10px;
-    margin: 0 4.5px;
+    margin: 4.5px;
     display: flex;
+    min-height: 32px;
     align-items: center;
     border-radius: 2px;
     color: white;

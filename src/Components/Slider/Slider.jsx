@@ -19,14 +19,13 @@ const Slider = () => {
     }, []);
 
     return (
-        <div className='my-5'>
+        <div className='mt-5'>
             <Swiper
                 modules={[Navigation, Autoplay]}
                 slidesPerView={1}
                 loop={true}
                 navigation
-                // autoplay={{ delay: 5000, disableOnInteraction: false, pauseOnMouseEnter: true }}
-
+                autoplay={{ delay: 5000, disableOnInteraction: false, pauseOnMouseEnter: true }}
             >
                 {newData.map((element, index) => {
                     return (

@@ -9,3 +9,19 @@
 .blog-post>.row>.col {
     padding: 17px;
 }
+
+@media (max-width: 768px){
+    .blog-post>.row {
+        padding: 11px;
+    }
+    .blog-post>.row>.col {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+}
+
+@media (max-width: 540px){
+    .blog-post>.row>.col {
+        width: 100%;
+    }
+}

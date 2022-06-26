@@ -22,25 +22,25 @@ const Footer = () => {
                     <FooterHeading>
                         Featured Posts
                     </FooterHeading>
-                    <PostLayout2 data={featured.slice(0,3)} hr={true}/>
+                    <PostLayout2 data={featured.slice(0, 3)} hr={true} />
                 </div>
                 <div className="col">
                     <FooterHeading>
                         Recents Posts
                     </FooterHeading>
-                    <PostLayout2 data={allPosts.slice(0,3)} hr={true}/>
+                    <PostLayout2 data={allPosts.slice(0, 3)} hr={true} />
                 </div>
                 <div className="col">
                     <FooterHeading>
                         Categories
                     </FooterHeading>
-                    <CategoryLayout/>
+                    <CategoryLayout />
                 </div>
             </div>
 
-            <FooterSocial/>
-            <hr className="m-0 p-0" style={{color:'#2e2e2e', opacity:'1'}}/>
-            <FooterCredit/>
+            <FooterSocial />
+            <hr className="m-0 p-0" style={{ color: '#2e2e2e', opacity: '1' }} />
+            <FooterCredit />
         </footer>
     )
 }

@@ -37,7 +37,7 @@ const Header = () => {
           </div>
           <div className="header-right d-flex">
             <Navbar />
-            <div className="nav-social me-3">
+            <div className="nav-social">
               <FaFacebookF className='default-hover' />
               <FaTwitter className='default-hover' />
               <FaInstagram className='default-hover' />

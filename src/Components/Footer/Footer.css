@@ -2,24 +2,31 @@ footer {
     overflow: hidden;
 }
 footer>.row{
-    margin: 0 -21px;
+    margin: -21px;
     padding: 53px 0;
 }
 footer>.row>.col{
-    padding: 0 21px;
+    padding: 21px;
+    flex: 0 0 auto;
+    width: 25%;
 }
 footer .pagelayout2>.row{
 
 }
-footer .pagelayout2>.row>.col>.row>.col:first-child{
-    width: 43%;
+
+@media (max-width: 1170px) {
+    footer>.row>.col{
+        width: 50%;
+    }
 }
-footer .pagelayout2>.row>.col>.row>.col:last-child{
-    width: 57%;
+
+@media (max-width: 660px) {
+    footer>.row>.col{
+        width: 100%;
+    }
 }
-footer .pagelayout2>.row>.col>.row>.col:last-child>h3{
-    font-size: 14.4px;
-}
-footer .pagelayout2 hr{
-    margin-top: 22px ;
+@media (max-width: 540px) {
+    footer> :first-child{
+        padding: 0 11px;
+    }
 }

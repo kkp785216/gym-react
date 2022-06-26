@@ -73,7 +73,7 @@ const Home = (props) => {
           </div>
 
           {/* Home - 2 */}
-          <div>
+          <div className='home2-slider'>
             <Heading color="primary">
               Muscle Building
             </Heading>

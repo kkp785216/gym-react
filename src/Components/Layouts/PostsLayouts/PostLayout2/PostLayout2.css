@@ -10,17 +10,21 @@
 .pagelayout2>.row>.col>.row{
     margin: -9px;
     padding: 9px 0;
+    margin-left: 0;
 }
 .pagelayout2>.row>.col>.row>.col{
     padding: 0 9px;
 }
 .pagelayout2>.row>.col>.row>.col:first-child{
     flex: 0 0 auto;
-    width: 45%;
+    width: 120px;
+    padding: 0;
 }
 .pagelayout2>.row>.col>.row>.col:last-child{
     flex: 0 0 auto;
-    width: 55%;
+    /* width: 55%; */
+    width: calc(100% - 120px);
+    padding-left: 16px;
 }
 .pagelayout2>.row>.col>.row>.col img{
     width: 100%;
@@ -36,4 +40,5 @@
 .pagelayout2 hr{
     opacity: 1;
     color: var(--border-color);
+    margin-top: 21px;
 }

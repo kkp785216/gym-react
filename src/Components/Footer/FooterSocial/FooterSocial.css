@@ -29,6 +29,15 @@
 .footer-social-single>a> :first-child>*{
     display: block;
 }
-.footer-social-single>a> :last-child{
 
+@media (max-width: 860px){
+    .footer-social-single>a> :last-child{
+        display: none;
+    }
+}
+
+@media (max-width: 540px){
+    .footer-social-single{
+        margin-right: 3px;
+    }
 }

@@ -14,7 +14,7 @@ const Home2 = ({ data }) => {
             <Swiper
                 // install Swiper modules
                 modules={[Navigation, Autoplay]}
-                spaceBetween={50}
+                spaceBetween={33}
                 slidesPerView={2}
                 loop={true}
                 navigation

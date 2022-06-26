@@ -24,3 +24,18 @@
     transform: scale(1.85);
     display: block;
 }
+.social-connect>.row>.col>a>.row>.col:last-child>*{
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+@media (max-width:1250px) {
+    .social-connect>.row>.col>a>.row>.col:first-child{
+        padding: 13px 11px;
+    }
+    .social-connect>.row>.col>a>.row>.col:last-child{
+        padding-left: 7px;
+        flex: 0 0 auto;
+    }
+}

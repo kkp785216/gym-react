@@ -20,6 +20,9 @@ nav>ul>li {
     padding-left: 0;
     padding-right: 33px;
 }
+nav>ul>li:last-child {
+    padding-right: 0;
+}
 
 nav>ul>li:hover .mega-progress {
     width: 100%;
@@ -50,4 +53,19 @@ nav>ul li a>svg::after {
     color: inherit;
     font-size: 13px;
     font-weight: normal;
+}
+
+@media (max-width: 1080px) {
+    nav>ul {
+        margin-right: 13px;
+    }
+    nav>ul>li {
+        padding-right: 13px;
+    }
+}
+
+@media (max-width: 960px) {
+    nav {
+        display: none;
+    }
 }

@@ -11,11 +11,10 @@ const PostLayout1 = (props) => {
                         <div className="col col-6" key={index}>
                             <div className="row">
                                 <div className="col">
-                                    <Link to={element.url}><img src={element.image} alt="" /></Link>
-                                </div>
-                                <div className="col">
-                                    <h3><Link to={element.url} className='default-hover'>{element.title}</Link></h3>
-                                    {props.date && <span>{element.date}</span>}
+                                    <h3><Link to={element.url} className='default-hover'>
+                                        <img src={element.image} alt="" />
+                                        {element.title}
+                                    </Link></h3>
                                 </div>
                             </div>
                         </div>

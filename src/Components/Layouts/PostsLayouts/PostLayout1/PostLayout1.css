@@ -10,16 +10,15 @@
 .pagelayout1>.row>.col>.row>.col{
     padding: 0 9px;
 }
-.pagelayout1>.row>.col>.row>.col:nth-child(1){
+.pagelayout1>.row>.col>.row>.col{
     flex: 0 0 auto;
-    width: 45%;
-}
-.pagelayout1>.row>.col>.row>.col:nth-child(2){
-    flex: 0 0 auto;
-    width: 55%;
+    width: 100%;
+    position: relative;
 }
 .pagelayout1>.row>.col>.row>.col img{
-    width: 100%;
+    width: 120px;
+    margin-right: 11px;
+    float: left;
 }
 .pagelayout1>.row>.col>.row>.col h3{
     font-size: 14.7px;
@@ -28,4 +27,29 @@
 }
 .pagelayout1>.row>.col>.row>.col span{
     font-size: 13px;
+}
+
+@media (max-width:1250px) {
+    .pagelayout1>.row{
+        margin: -9px;
+    }
+    .pagelayout1>.row>.col{
+        padding: 9px;
+    }
+    .pagelayout1>.row>.col>.row{
+        margin: 0 -7px;
+        padding-bottom: 11px;
+    }
+    .pagelayout1>.row>.col>.row>.col{
+        padding: 0 7px;
+    }
+    .pagelayout1>.row>.col>.row>.col h3{
+        font-size: 13.7px;
+    }
+}
+
+@media (max-width: 660px) {
+    .pagelayout1>.row>.col{
+        width: 100%;
+    }
 }

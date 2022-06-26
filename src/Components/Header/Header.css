@@ -57,3 +57,20 @@ header.on .header-left img {
     visibility: visible;
     opacity: 1;
 }
+
+header .header-right> * {
+    margin-right: 33px;
+}
+header .header-right> *:last-child{
+    margin-right: 0;
+}
+
+@media (max-width: 540px) {
+    header{
+        padding-left: 11px;
+        padding-right: 11px;
+    }
+    header.on{
+        padding: 0;
+    }
+}

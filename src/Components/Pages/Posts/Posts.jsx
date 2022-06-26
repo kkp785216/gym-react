@@ -39,7 +39,7 @@ const Posts = () => {
   console.log(onlineComments)
   useEffect(() => {
     fetchComment()
-  }, [postId])
+  }, [postId, fetchComment])
 
   return (
     <>

@@ -16,3 +16,32 @@
 .postlayout4>.col>a>img{
     width: 100%;
 }
+
+@media (max-width: 1080px) {
+    .postlayout4>.col h3{
+        font-size: 15px;
+        margin-top: 17px;
+        margin-bottom: 5px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .postlayout4.row{
+        margin: -16.5px;
+    }
+    .postlayout4>.col{
+        width: 50%;
+        padding: 16.5px;
+    }
+}
+
+@media (max-width: 540px) {
+    .postlayout4.row{
+        margin: -16.5px;
+    }
+    .postlayout4>.col{
+        width: 100%;
+        padding: 16.5px;
+    }
+}
