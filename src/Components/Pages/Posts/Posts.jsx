@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Posts.css'
 import Header from '../../Header/Header'
 import FacebookFeed from '../../Layouts/FacebookFeed/FacebookFeed'
@@ -6,7 +6,6 @@ import Heading from '../../Layouts/Heading/Heading'
 import ColumnLayout from '../../Layouts/MainLayout/ColumnLayout'
 import MainiLayout from '../../Layouts/MainLayout/MainLayout'
 import SocialConnect from '../../Layouts/SocialConnect/SocialConnect'
-import { weight_loss } from '../../../Database/SortedPosts'
 import PostLayout2 from '../../Layouts/PostsLayouts/PostLayout2/PostLayout2'
 import PostImage from './PostImage/PostImage'
 import { useParams, Link } from 'react-router-dom';
@@ -24,12 +23,23 @@ import Footer from '../../Footer/Footer'
 
 const Posts = () => {
 
+  const [onlineComments, setOnlineComments] = useState([]);
+
   let { postId } = useParams();
   let currentPost = allPosts.filter(element => element.url.replace('/', '') === postId);
   useEffect(() => {
-    window.document.body.scrollIntoView()
-  }, [currentPost])
+    window.document.body.scrollIntoView();
+  }, [postId])
 
+  const fetchComment = () => {
+    fetch(`https://react4-backend.vercel.app/api/comments?url=${postId}`)
+      .then(response => response.json())
+      .then(data => { setOnlineComments(data) });
+  }
+  console.log(onlineComments)
+  useEffect(() => {
+    fetchComment()
+  }, [postId])
 
   return (
     <>
@@ -90,8 +100,8 @@ const Posts = () => {
                   <PostShare data={currentPost[0]} />
                 </div>
 
-                <div className='py-4'>
-                  <Comment />
+                <div className={(onlineComments.data && onlineComments.data.length >= 1) ? 'py-4':'py-0'}>
+                  <Comment data={onlineComments} />
                 </div>
 
                 <div className='py-3'>
@@ -101,7 +111,7 @@ const Posts = () => {
                 <hr className='p-0 m-0 my-3' style={{ color: 'var(--border-color)', opacity: '1' }} />
 
                 <div className='py-3'>
-                  <LeaveComment />
+                  <LeaveComment fetchComment={fetchComment} />
                 </div>
               </>
             }
@@ -109,7 +119,7 @@ const Posts = () => {
 
           <ColumnLayout>
             <div>
-              <SearchLayout/>
+              <SearchLayout />
             </div>
 
             <div>
@@ -135,10 +145,10 @@ const Posts = () => {
           </ColumnLayout>
 
         </MainiLayout>
-        
+
         <hr className='m-0 p-0' style={{ color: 'var(--border-color)', opacity: '1' }} />
 
-        <Footer/>
+        <Footer />
       </> :
         <>
           <Error />

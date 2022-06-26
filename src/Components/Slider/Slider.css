@@ -19,7 +19,7 @@
 
 .slider-wrapper>.row>.col:nth-child(1) .slider_img_box,
 .slider-wrapper>.row>.col:nth-child(2) .slider_img_box {
-    height: 400px;
+    aspect-ratio: 1170/700;
     overflow: hidden;
 }
 .slider-wrapper>.row>.col:nth-child(1) .slider_img_box img,
@@ -50,8 +50,9 @@
 .slider-wrapper>.row>.col .slider_img_box {
     width: 100%;
     position: relative;
+    aspect-ratio: 1170/780;
 }
-.slider-wrapper>.row>.col .slider_img_box::before {
+.slider-wrapper>.row>.col> .slider_img_box>a::before {
     content: '';
     position: absolute;
     width: 100%;

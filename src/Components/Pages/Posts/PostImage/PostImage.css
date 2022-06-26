@@ -5,10 +5,18 @@
 
 .post-image {
     position: relative;
+    width: 100%;
+    aspect-ratio: 1170/780;
+    overflow: hidden;
 }
 
 .post-image img {
     cursor: pointer;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: -1;
 }
 
 .post-image::before {

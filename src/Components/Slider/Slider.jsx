@@ -25,7 +25,7 @@ const Slider = () => {
                 slidesPerView={1}
                 loop={true}
                 navigation
-                autoplay={{ delay: 5000, disableOnInteraction: false, pauseOnMouseEnter: true }}
+                // autoplay={{ delay: 5000, disableOnInteraction: false, pauseOnMouseEnter: true }}
 
             >
                 {newData.map((element, index) => {

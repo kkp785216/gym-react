@@ -1,5 +1,9 @@
 .comment-wrapper>.row{
     margin: 0 -8px;
+    padding-bottom: 33px;
+}
+.comment-wrapper>.row:last-child{
+    padding-bottom: 0;
 }
 .comment-wrapper>.row>.col{
     padding: 0 8px;
