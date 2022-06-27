@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
-import { useParams } from 'react-router-dom';
 import './LeaveComment.css'
 
 const LeaveComment = (props) => {
-    let { postId } = useParams();
-    const [comment, setComment] = useState({ name: "", email: "", message: "", website: "", url: postId, save_checked: false });
+    const [comment, setComment] = useState({ name: "", email: "", message: "", website: "", url: props.postId, save_checked: false });
     const onChange = (e) => {
         setComment({ ...comment, [e.target.name]: e.target.value })
     }
@@ -15,9 +13,9 @@ const LeaveComment = (props) => {
             .then(response => response.json())
             .then(data => {
                 console.log(data)
-                props.fetchComment();
+                props.fetchComment(props.postId);
                 alert(`hello ${data.name} your comment has been saved successfully!`);
-                setComment({ name: "", email: "", message: "", website: "", url: postId, save_checked: false })
+                setComment({ name: "", email: "", message: "", website: "", url: props.postId, save_checked: false })
             });
     }
     return (

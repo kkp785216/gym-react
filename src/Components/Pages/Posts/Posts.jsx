@@ -29,17 +29,14 @@ const Posts = () => {
   let currentPost = allPosts.filter(element => element.url.replace('/', '') === postId);
   useEffect(() => {
     window.document.body.scrollIntoView();
+    fetchComment(postId);
   }, [postId])
 
-  const fetchComment = () => {
+  const fetchComment = (postId) => {
     fetch(`https://react4-backend.vercel.app/api/comments?url=${postId}`)
       .then(response => response.json())
       .then(data => { setOnlineComments(data) });
   }
-  console.log(onlineComments)
-  useEffect(() => {
-    fetchComment()
-  }, [postId, fetchComment])
 
   return (
     <>
@@ -100,7 +97,7 @@ const Posts = () => {
                   <PostShare data={currentPost[0]} />
                 </div>
 
-                <div className={(onlineComments.data && onlineComments.data.length >= 1) ? 'py-4':'py-0'}>
+                <div className={(onlineComments.data && onlineComments.data.length >= 1) ? 'py-4' : 'py-0'}>
                   <Comment data={onlineComments} />
                 </div>
 
@@ -111,7 +108,7 @@ const Posts = () => {
                 <hr className='p-0 m-0 my-3' style={{ color: 'var(--border-color)', opacity: '1' }} />
 
                 <div className='py-3'>
-                  <LeaveComment fetchComment={fetchComment} />
+                  <LeaveComment fetchComment={fetchComment} postId={postId}/>
                 </div>
               </>
             }
