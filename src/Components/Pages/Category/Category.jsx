@@ -49,7 +49,7 @@ const Category = (props) => {
 
         {validateCategory !== undefined ? <>
 
-          <MainiLayout className="category-posts">
+          <MainiLayout className="category-posts-wrapper">
 
             <ColumnLayout>
               <div>
