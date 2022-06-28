@@ -15,7 +15,8 @@ function App() {
         <Route exact path={`/page/:page`} element={<Home basename={basename}/>} />
         <Route exact path='/:postId' element={<Posts />} />
         <Route exact path='/search' element={<Search />} />
-        <Route exact path='/category/:categoryId' element={<Category />} />
+        <Route exact path='/category/:categoryId' element={<Category basename={basename}/>} />
+        <Route exact path='/category/:categoryId/page/:page' element={<Category basename={basename}/>} />
         <Route path='/*' element={<div>Page Not Found</div>}/>
       </Routes>
     </Router>

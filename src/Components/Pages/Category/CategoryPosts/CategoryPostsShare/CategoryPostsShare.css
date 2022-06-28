@@ -1,0 +1,75 @@
+.category-post-share{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+}
+.category-post-share::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: var(--border-color);
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.category-post-share>span{
+    padding: 0 21px 0 12px;
+    font-size: 15px;
+    margin: auto 0;
+    font-weight: 600;
+}
+
+.category-post-share>.category-post-share-btn{
+    padding: 4.5px;
+    display: flex;
+    min-height: 32px;
+    align-items: center;
+    font-size: 14px;
+    border-radius: 2px;
+    cursor: pointer;
+    background-color: white;
+}
+.category-post-share>.category-post-share-like>span{
+    margin-right: 5px;
+    font-weight: 500;
+}
+.category-post-share>.category-post-share-hover{
+   position: relative;
+}
+.category-post-share>.category-post-share-hover>div{
+    position: absolute;
+    top: 54px;
+    left: -12px;
+    right: -12px;
+    text-align: center;
+    display: block;
+    background-color: black;
+    color: white;
+    font-size: 8px;
+    z-index: 0;
+    padding: 3px;
+    transition: .27s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+.category-post-share>.category-post-share-hover:hover> div{
+    top: 42px;
+    opacity: 1;
+    visibility: visible;
+}
+.category-post-share>.category-post-share-hover>div>div:before{
+    width: 9px;
+    height: 9px;
+    content: "";
+    top: -7.3px;
+    background: black;
+    transform: rotate(45deg);
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: -1;
+}

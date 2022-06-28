@@ -108,7 +108,7 @@ const Posts = () => {
                 <hr className='p-0 m-0 my-3' style={{ color: 'var(--border-color)', opacity: '1' }} />
 
                 <div className='py-3'>
-                  <LeaveComment fetchComment={fetchComment} postId={postId}/>
+                  <LeaveComment fetchComment={fetchComment} postId={postId} />
                 </div>
               </>
             }
@@ -145,11 +145,9 @@ const Posts = () => {
 
         <hr className='m-0 p-0' style={{ color: 'var(--border-color)', opacity: '1' }} />
 
-        <Footer />
-      </> :
-        <>
-          <Error />
-        </>}
+      </> : <Error />}
+      
+      <Footer />
     </>
   )
 }

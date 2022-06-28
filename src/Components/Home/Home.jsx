@@ -129,7 +129,7 @@ const Home = (props) => {
             )
           })}
         </BlogPostRow>
-        <Pagination pageCount={totalPage} handlePageClick={handlePageClick} page={page} />
+        {totalPage > 1 && <Pagination pageCount={totalPage} handlePageClick={handlePageClick} page={page} />}
       </div>
 
       <hr className='m-0 p-0' style={{ color: 'var(--border-color)', opacity: '1' }} />

@@ -40,12 +40,6 @@ const Categories = {
         url: "lifestyle",
         name: "Life Style",
         parent: null
-    },
-    fh: {
-        id: "lifestyle",
-        url: "lifestyle",
-        name: "Life Style",
-        parent:'workout'
     }
 }
 
