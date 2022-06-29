@@ -17,6 +17,7 @@
 
 .column-layout.middle {
     width: 50%;
+    overflow: hidden;
 }
 
 @media (max-width: 960px){

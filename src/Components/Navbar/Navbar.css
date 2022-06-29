@@ -1,52 +1,52 @@
-nav {
+.pc-navbar {
     height: 60px;
     line-height: 60px;
     transition: .27s ease;
 }
 
-nav.on {
+.pc-navbar.on {
     height: 80px;
     line-height: 80px;
 }
-nav.on .mega-wrapper{
+.pc-navbar.on .mega-wrapper{
     top: 80px;
 }
 
-nav>ul {
+.pc-navbar>ul {
     display: flex;
 }
 
-nav>ul>li {
+.pc-navbar>ul>li {
     padding-left: 0;
     padding-right: 33px;
 }
-nav>ul>li:last-child {
+.pc-navbar>ul>li:last-child {
     padding-right: 0;
 }
 
-nav>ul>li:hover .mega-progress {
+.pc-navbar>ul>li:hover .mega-progress {
     width: 100%;
     transition: all .4s ease-in-out;
     transition-delay: .3s;
 }
-nav>ul>li:hover .mega-wrapper {
+.pc-navbar>ul>li:hover .mega-wrapper {
     opacity: 1;
     visibility: visible;
 }
-nav>ul>li:hover .mega-wrapper .mega-row {
+.pc-navbar>ul>li:hover .mega-wrapper .mega-row {
     transform: scaleY(1);
     opacity: 1;
 }
 
 
-nav>ul li>a {
+.pc-navbar>ul li>a {
     font-family: 'Source Sans Pro', sans-serif;
     color: var(--primary-font-color);
     font-size: 14px;
     letter-spacing: 1px;
 }
 
-nav>ul li a>svg::after {
+.pc-navbar>ul li a>svg::after {
     font-family: FontAwesome;
     content: "\f107";
     margin-left: 5px;
@@ -56,16 +56,16 @@ nav>ul li a>svg::after {
 }
 
 @media (max-width: 1080px) {
-    nav>ul {
+    .pc-navbar>ul {
         margin-right: 13px;
     }
-    nav>ul>li {
+    .pc-navbar>ul>li {
         padding-right: 13px;
     }
 }
 
 @media (max-width: 960px) {
-    nav {
+    .pc-navbar {
         display: none;
     }
 }

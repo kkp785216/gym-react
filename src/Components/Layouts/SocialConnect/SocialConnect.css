@@ -39,3 +39,9 @@
         flex: 0 0 auto;
     }
 }
+
+@media (max-width: 960px) {
+    .social-connect>.row>.col>a>.row>.col:last-child{
+        flex: 0 0;
+    }
+}

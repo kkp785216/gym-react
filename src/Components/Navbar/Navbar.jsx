@@ -13,7 +13,7 @@ const Navbar = () => {
     { url: '/category/fitness', category: 'All', data: fitness },
   ]
   return (
-    <nav className='on'>
+    <nav className='pc-navbar on'>
       <ul className='p-0 m-0'>
         <li><Link to="/" className='default-hover'>HOME</Link></li>
         <li><Link to="/category/fitness" className='default-hover'>FITNESS <HiChevronDown /></Link><MegaMenu menu={'Fitness'} data={null} multiData={obj} /></li>

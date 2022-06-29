@@ -16,7 +16,7 @@ const CategoryPosts = ({ data }) => {
                             <div className="category-posts-cat">
                                 {element.categories.filter(c => c.id !== element.category_id.parent).map((element, index) => {
                                     return (
-                                        <Link to={element.url} key={index}>{element.name}</Link>
+                                        <Link to={element.url} key={index}>{element.name} </Link>
                                     )
                                 })}
                             </div>

@@ -1,6 +1,5 @@
 import React, {useEffect} from 'react'
-import './Category.css'
-import { Categories } from '../../../Database/Categories';
+import '../Category/Category.css'
 import Header from '../../Header/Header'
 import MainiLayout from '../../Layouts/MainLayout/MainLayout';
 import ColumnLayout from '../../Layouts/MainLayout/ColumnLayout';
@@ -16,41 +15,40 @@ import CategoryLayout from '../../Layouts/CategoryLayout/CategoryLayout';
 import Error from '../Error/Error';
 import Footer from '../../Footer/Footer';
 import { useNavigate, useParams } from 'react-router-dom';
-import CategoryPosts from './CategoryPosts/CategoryPosts';
+import CategoryPosts from '../Category/CategoryPosts/CategoryPosts';
 import {MdArrowBackIosNew} from 'react-icons/md'
 import {MdArrowForwardIos} from 'react-icons/md'
 
-const Category = (props) => {
-  const { categoryId } = useParams();
-  let validateCategory = Categories[categoryId.replace('-', '_')];
-  let currentCategory = allPosts.filter(c => c.categories.find(d => d.id === categoryId.replace('-', '_')));
+const Tags = (props) => {
+  const { tagId } = useParams();
+  let currentTag = allPosts.filter(c => c.tags.find(d => d === tagId.replace('-', '_')));
 
   let navigate = useNavigate();
   let { page } = useParams();
-  (window.location.pathname === (props.basename !== undefined ? props.basename.replace(/\//g, '').replace(/^/, '/').replace(/$/, `/category/${categoryId}`) : `/category/${categoryId}`)) && (page = 1);
-  (window.location.pathname === (props.basename !== undefined ? props.basename.replace(/\//g, '').replace(/^/, '/').replace(/$/, `/category/${categoryId}/`) : `/category/${categoryId}/`)) && (page = 1);
+  (window.location.pathname === (props.basename !== undefined ? props.basename.replace(/\//g, '').replace(/^/, '/').replace(/$/, `/tag/${tagId}`) : `/category/${tagId}`)) && (page = 1);
+  (window.location.pathname === (props.basename !== undefined ? props.basename.replace(/\//g, '').replace(/^/, '/').replace(/$/, `/tag/${tagId}/`) : `/category/${tagId}/`)) && (page = 1);
 
   let perPagePost = 9;
-  let totalPage = Math.ceil(currentCategory.length / perPagePost);
+  let totalPage = Math.ceil(currentTag.length / perPagePost);
 
   const handlePageClick = (selected) => {
     if (selected >= 1 && selected <= totalPage) {
-      let url = `/category/${categoryId}`
+      let url = `/tag/${tagId}`
       navigate(`${url}/page/${selected}`);
     }
   }
   
   useEffect(()=> {
     window.document.body.scrollIntoView();
-  }, [categoryId, page]);
+  }, [tagId, page]);
 
   return (
     <>
       <>
         <Header />
 
-        {validateCategory !== undefined ? <>
-          {console.log(currentCategory)}
+        {currentTag.length >= 1 ? <>
+
           <MainiLayout className="category-posts-wrapper">
 
             <ColumnLayout>
@@ -79,12 +77,12 @@ const Category = (props) => {
             <ColumnLayout className="middle">
               <div>
                 <div className="cat-title">
-                  <span>Category:</span>
-                  <h1> {validateCategory.name}</h1>
+                  <span>Tag:</span>
+                  <h1> {tagId.replace(tagId[0], tagId[0].toUpperCase())}</h1>
                 </div>
 
-                {currentCategory.length >= 1 && <>
-                  <CategoryPosts data={currentCategory.slice(perPagePost * (page - 1), (perPagePost * page))} />
+                {currentTag.length >= 1 && <>
+                  <CategoryPosts data={currentTag.slice(perPagePost * (page - 1), (perPagePost * page))} />
                   {totalPage > 1 && <div className='cat-page-btn'>
                     <button  disabled={parseInt(page) <= 1} onClick={(e) => { handlePageClick(page - 1) }}><MdArrowBackIosNew/> Newer Posts</button>
                     <span>/</span>
@@ -92,7 +90,7 @@ const Category = (props) => {
                   </div>}
                 </>}
 
-                {currentCategory.length === 0 && <div>There is no posts to display in this category</div>}
+                {currentTag.length === 0 && <div>There is no posts to display in this category</div>}
               </div>
             </ColumnLayout>
 
@@ -135,4 +133,4 @@ const Category = (props) => {
   )
 }
 
-export default Category
+export default Tags

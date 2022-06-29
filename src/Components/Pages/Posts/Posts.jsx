@@ -35,7 +35,7 @@ const Posts = () => {
   const fetchComment = (postId) => {
     fetch(`https://react4-backend.vercel.app/api/comments?url=${postId}`)
       .then(response => response.json())
-      .then(data => { setOnlineComments(data) });
+      .then(data => { data.success === true && setOnlineComments(data) });
   }
 
   return (

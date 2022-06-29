@@ -28,5 +28,6 @@ footer .pagelayout2>.row{
 @media (max-width: 540px) {
     footer> :first-child{
         padding: 0 11px;
+        padding-top: 53px;
     }
 }

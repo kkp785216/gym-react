@@ -19,7 +19,13 @@ header.on{
     width: 100%;
     height: 80px;
 }
-
+header .hamburger{
+    display: none;
+    cursor: pointer;
+}
+header .hamburger>*{
+    font-size: 21px;
+}
 header .header-left img {
     width: 6rem;
     transition: .27s ease;
@@ -53,6 +59,26 @@ header.on .header-left img {
     transition: all .8s ease;
 }
 
+.searchbtn> *{
+    cursor: pointer;
+}
+.searchbtn> :last-child{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    z-index: 1;
+    visibility: hidden;
+    transition: .8s ease;
+    opacity: 0;
+    font-size: 21px;
+}
+.searchbtn> :last-child.on{
+    visibility: visible;
+    opacity: 1;
+}
+
 .search.on {
     visibility: visible;
     opacity: 1;
@@ -65,12 +91,15 @@ header .header-right> *:last-child{
     margin-right: 0;
 }
 
+@media (max-width: 960px) {
+    header .hamburger{
+        display: block;
+    }
+}
+
 @media (max-width: 540px) {
     header{
         padding-left: 11px;
         padding-right: 11px;
-    }
-    header.on{
-        padding: 0;
     }
 }

@@ -12,10 +12,11 @@ const LeaveComment = (props) => {
         fetch(url + "?" + new URLSearchParams(comment), { method: 'POST' })
             .then(response => response.json())
             .then(data => {
-                console.log(data)
-                props.fetchComment(props.postId);
-                alert(`hello ${data.name} your comment has been saved successfully!`);
-                setComment({ name: "", email: "", message: "", website: "", url: props.postId, save_checked: false })
+                if (data.success = true) {
+                    props.fetchComment(props.postId);
+                    alert(`hello ${data.name} your comment has been saved successfully!`);
+                    setComment({ name: "", email: "", message: "", website: "", url: props.postId, save_checked: false })
+                }
             });
     }
     return (
