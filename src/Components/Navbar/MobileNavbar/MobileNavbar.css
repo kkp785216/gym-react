@@ -8,12 +8,27 @@
     background-color: white;
     z-index: 1000;
     margin-right: 0 !important;
-    left: -270px;
+    left: 0;
     transition: all .3s ease-in-out;
-    overflow-y: scroll;
+    overflow-y: auto;
+    transform: translate(-270px, 0);
+    line-height: 40px;
+}
+.mobile-nav-wrapper> ul> li{
+    position: relative;
+}
+.mobile-nav-wrapper> ul > li::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    width: 100%;
+    background-color: black;
 }
 .mobile-nav-wrapper.on{
-    left: 0;
+    transform: translate(0);
 }
 .mobile-nav-logo {
     text-align: center;
