@@ -1,4 +1,4 @@
-import React, { useEffect, useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import './MobileNavbar.css'
 
 const MobileNavbar = (props) => {
@@ -14,7 +14,7 @@ const MobileNavbar = (props) => {
                 div.innerHTML = "<li></li>"
                 div.querySelector('li').innerHTML = element.outerHTML
                 let underdiv = element.parentElement.querySelector('ul.text-start')
-                if(underdiv !== null) {
+                if (underdiv !== null) {
                     div.querySelector('li').innerHTML += underdiv.outerHTML
                 }
                 let reactHtml = div.innerHTML

@@ -1,22 +1,15 @@
-import React, {useState} from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import React from 'react'
+import { Link } from 'react-router-dom'
 import './Error.css'
+import err_img from '../../../Media/image/utility/404.png'
+import SearchLayout from '../../Layouts/SearchLayout/SearchLayout'
 
 const Error = () => {
-  const [searchText, setSearchText] = useState("");
-  const navigate = useNavigate();
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    navigate(`/search?q=${searchText}`);
-  }
   return (
     <div className='error'>
-        <h1>404</h1>
-        <div></div>
-        <p></p>
-        <form onSubmit={handleSubmit}>
-            <input type="text" value={searchText} onChange={(e) => { setSearchText(e.target.value) }}/>
-        </form>
+        <h1><img src={err_img} alt="404" /></h1>
+        <p>OOPS! Page you're looking for doesn't exist. Please use search for help</p>
+        <SearchLayout/>
         <Link to="/">Back to Home Page</Link>
     </div>
   )
