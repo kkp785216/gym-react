@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react4/static/css/main.a5001ddf.css",
-    "main.js": "/react4/static/js/main.51882f43.js",
+    "main.js": "/react4/static/js/main.fde9a778.js",
     "static/media/SourceSansPro-SemiBold.ttf": "/react4/static/media/SourceSansPro-SemiBold.f2fa8f369db189665539.ttf",
     "static/media/SourceSansPro-Bold.ttf": "/react4/static/media/SourceSansPro-Bold.2dec2f24e3bdf2c6862e.ttf",
     "static/media/1.jpg": "/react4/static/media/1.3c790bb30a28fcaecded.jpg",
@@ -13,14 +13,15 @@
     "static/media/3.jpg": "/react4/static/media/3.8c38ea87e568b8c6beb5.jpg",
     "static/media/8.jpg": "/react4/static/media/8.e435163b3078342e8746.jpg",
     "static/media/6.jpg": "/react4/static/media/6.404de14b06b1d4b8f06f.jpg",
+    "service-worker.js": "/react4/service-worker.js",
     "static/media/logo.png": "/react4/static/media/logo.3917c8479e580edc57b5.png",
     "static/media/about.jpg": "/react4/static/media/about.19a240212b70746a1044.jpg",
     "index.html": "/react4/index.html",
     "main.a5001ddf.css.map": "/react4/static/css/main.a5001ddf.css.map",
-    "main.51882f43.js.map": "/react4/static/js/main.51882f43.js.map"
+    "main.fde9a778.js.map": "/react4/static/js/main.fde9a778.js.map"
   },
   "entrypoints": [
     "static/css/main.a5001ddf.css",
-    "static/js/main.51882f43.js"
+    "static/js/main.fde9a778.js"
   ]
 }
