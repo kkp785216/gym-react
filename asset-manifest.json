@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/react-gym/static/css/main.84c66f56.css",
-    "main.js": "/react-gym/static/js/main.39bd3de5.js",
-    "static/media/SourceSansPro-SemiBold.ttf": "/react-gym/static/media/SourceSansPro-SemiBold.f2fa8f369db189665539.ttf",
-    "static/media/SourceSansPro-Bold.ttf": "/react-gym/static/media/SourceSansPro-Bold.2dec2f24e3bdf2c6862e.ttf",
-    "static/media/1.jpg": "/react-gym/static/media/1.3c790bb30a28fcaecded.jpg",
-    "static/media/4.jpg": "/react-gym/static/media/4.82cbda2f1a05e2767ebe.jpg",
-    "static/media/5.jpg": "/react-gym/static/media/5.158bdbfe857782f8b378.jpg",
-    "static/media/9.jpg": "/react-gym/static/media/9.e89353f8a2079f8b3fad.jpg",
-    "static/media/2.jpg": "/react-gym/static/media/2.087d9e3dd39c5151cd4b.jpg",
-    "static/media/7.jpg": "/react-gym/static/media/7.093572ee5b875cbc7e97.jpg",
-    "static/media/3.jpg": "/react-gym/static/media/3.8c38ea87e568b8c6beb5.jpg",
-    "static/media/8.jpg": "/react-gym/static/media/8.e435163b3078342e8746.jpg",
-    "static/media/6.jpg": "/react-gym/static/media/6.404de14b06b1d4b8f06f.jpg",
-    "service-worker.js": "/react-gym/service-worker.js",
-    "static/media/logo.png": "/react-gym/static/media/logo.3917c8479e580edc57b5.png",
-    "static/media/about.jpg": "/react-gym/static/media/about.19a240212b70746a1044.jpg",
-    "index.html": "/react-gym/index.html",
-    "main.84c66f56.css.map": "/react-gym/static/css/main.84c66f56.css.map",
-    "main.39bd3de5.js.map": "/react-gym/static/js/main.39bd3de5.js.map"
+    "main.css": "/gym-react/static/css/main.8020baad.css",
+    "main.js": "/gym-react/static/js/main.3f3cbff7.js",
+    "static/media/SourceSansPro-SemiBold.ttf": "/gym-react/static/media/SourceSansPro-SemiBold.f2fa8f369db189665539.ttf",
+    "static/media/SourceSansPro-Bold.ttf": "/gym-react/static/media/SourceSansPro-Bold.2dec2f24e3bdf2c6862e.ttf",
+    "static/media/1.jpg": "/gym-react/static/media/1.3c790bb30a28fcaecded.jpg",
+    "static/media/4.jpg": "/gym-react/static/media/4.82cbda2f1a05e2767ebe.jpg",
+    "static/media/5.jpg": "/gym-react/static/media/5.158bdbfe857782f8b378.jpg",
+    "static/media/9.jpg": "/gym-react/static/media/9.e89353f8a2079f8b3fad.jpg",
+    "static/media/2.jpg": "/gym-react/static/media/2.087d9e3dd39c5151cd4b.jpg",
+    "static/media/7.jpg": "/gym-react/static/media/7.093572ee5b875cbc7e97.jpg",
+    "static/media/3.jpg": "/gym-react/static/media/3.8c38ea87e568b8c6beb5.jpg",
+    "static/media/8.jpg": "/gym-react/static/media/8.e435163b3078342e8746.jpg",
+    "static/media/6.jpg": "/gym-react/static/media/6.404de14b06b1d4b8f06f.jpg",
+    "service-worker.js": "/gym-react/service-worker.js",
+    "static/media/logo.png": "/gym-react/static/media/logo.3917c8479e580edc57b5.png",
+    "static/media/about.jpg": "/gym-react/static/media/about.19a240212b70746a1044.jpg",
+    "index.html": "/gym-react/index.html",
+    "main.8020baad.css.map": "/gym-react/static/css/main.8020baad.css.map",
+    "main.3f3cbff7.js.map": "/gym-react/static/js/main.3f3cbff7.js.map"
   },
   "entrypoints": [
-    "static/css/main.84c66f56.css",
-    "static/js/main.39bd3de5.js"
+    "static/css/main.8020baad.css",
+    "static/js/main.3f3cbff7.js"
   ]
 }
