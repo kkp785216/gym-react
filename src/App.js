@@ -8,7 +8,7 @@ import Category from './Components/Pages/Category/Category'
 import Tags from './Components/Pages/Tags/Tags'
 
 function App() {
-  const basename = "/react-gym"
+  const basename = "/gym-react"
   return (
     <Router basename={basename}>
       <Routes>
