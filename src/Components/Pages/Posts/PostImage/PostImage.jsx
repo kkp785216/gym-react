@@ -1,13 +1,8 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import './PostImage.css'
 import { Link } from 'react-router-dom';
 
 const PostImage = ({ data }) => {
-    useEffect(()=>{
-        document.querySelector('.post-image img').onload = () => {
-            console.log('image has been loaded')
-          }
-    },[window.location.href])
     return (
         <div>
             <div className="post-image-wrapper">

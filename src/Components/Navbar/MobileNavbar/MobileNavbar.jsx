@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import './MobileNavbar.css'
 
 const MobileNavbar = (props) => {
-    const [mobileNav, setMobileNav] = useState("")
     useEffect(() => {
         setTimeout(() => {
             document.querySelector('.mobile-nav-logo').innerHTML = document.querySelector('.header-left a').outerHTML;
@@ -18,9 +17,7 @@ const MobileNavbar = (props) => {
                     div.querySelector('li').innerHTML += underdiv.outerHTML
                 }
                 let reactHtml = div.innerHTML
-                // reactHtml = reactHtml.replaceAll('<a','<Link').replaceAll('</a>', '</Link>').replaceAll('href=', 'to=')
                 document.querySelector('.mobile-navbar').innerHTML += reactHtml;
-                setMobileNav(reactHtml)
             })
         }, 0);
     }, []);

@@ -22,7 +22,7 @@ import {MdArrowBackIosNew} from 'react-icons/md'
 import {MdArrowForwardIos} from 'react-icons/md'
 
 const Tags = (props) => {
-  let [searchParams, setSearchParams] = useSearchParams(); 
+  let [searchParams, setSearchParams] = useSearchParams();
   let query = searchParams.get("q");
 
   let searchResult = allPosts.filter(a=>a.title.toLowerCase().includes(query.toLowerCase()));
@@ -32,8 +32,6 @@ const Tags = (props) => {
   let { page } = useParams();
   (window.location.pathname === (props.basename !== undefined ? props.basename.replace(/\//g, '').replace(/^/, '/').replace(/$/, `/search`) : `/search`)) && (page = 1);
   (window.location.pathname === (props.basename !== undefined ? props.basename.replace(/\//g, '').replace(/^/, '/').replace(/$/, `/search/`) : `/search/`)) && (page = 1);
-  console.log(page)
-  // console.log(props.basename.replace(/\//g, '').replace(/^/, '/').replace(/$/, `/search`))
 
   let perPagePost = 9;
   let totalPage = Math.ceil(searchResult.length / perPagePost);

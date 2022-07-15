@@ -18,7 +18,7 @@ const PostShare = ({data}) => {
                     <FaHeart onClick={handleLike} style={{fontSize:'14px'}}/>:
                     <FaRegHeart onClick={handleLike} style={{fontSize:'14px'}}/>}
             </div>
-            <a href={`https://www.facebook.com/sharer/sharer.php?u=${window.location.origin}/${data.url.replace('/','')}`} target="_blank" className="post-share-btn post-share-hover" style={{background:'#0d47a1'}}>
+            <a href={`https://www.facebook.com/sharer/sharer.php?u=${window.location.origin}/${data.url.replace('/','')}`} target="_blank" rel="noreferrer" className="post-share-btn post-share-hover" style={{background:'#0d47a1'}}>
                     <FaFacebookF/>
                     <div>
                         <div className="position-relative">
@@ -26,7 +26,7 @@ const PostShare = ({data}) => {
                         </div>
                     </div>
             </a>
-            <a href={`https://twitter.com/intent/tweet?text=Checkout this article: ${data.title} - ${window.location.origin}/${data.url.replace('/','')}`} target="_blank" className="post-share-btn post-share-hover" style={{background:'#40c4ff'}}>
+            <a href={`https://twitter.com/intent/tweet?text=Checkout this article: ${data.title} - ${window.location.origin}/${data.url.replace('/','')}`} target="_blank" rel="noreferrer" className="post-share-btn post-share-hover" style={{background:'#40c4ff'}}>
                     <FaTwitter/>
                     <div>
                         <div className="position-relative">
