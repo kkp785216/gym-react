@@ -1,6 +1,6 @@
 # React GYM
 
-<h3><a href="https://kkp785216.github.io/youtube-clone">View Demo</a></h3>
+<h3><a href="https://kkp785216.github.io/react-gym">View Demo</a></h3>
 
 ### Made a GYM Project with react, firebase and node js
 
