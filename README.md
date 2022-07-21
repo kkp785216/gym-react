@@ -1,4 +1,4 @@
-# React GYM
+# Professional GYM Web App using React
 
 <h3><a href="https://kkp785216.github.io/gym-react">View Demo</a></h3>
 
